@@ -1,0 +1,635 @@
+{
+  "common": {
+    "brand": {
+      "wordmark": "Kojikane",
+      "eyewearWord": "Eyewear",
+      "descriptor": "Fashion & Prescription Eyewear"
+    },
+    "nav": {
+      "home": "Home",
+      "eyewear": "Eyewear",
+      "fashion": "Fashion Eyewear",
+      "prescription": "Prescription Eyewear",
+      "services": "Services",
+      "about": "About",
+      "journal": "Journal",
+      "visit": "Visit Us",
+      "privacy": "Privacy Policy",
+      "terms": "Terms"
+    },
+    "cta": {
+      "visitStore": "Visit Our Store",
+      "exploreEyewear": "Explore Eyewear",
+      "getDirections": "Get directions",
+      "callShop": "Call the shop",
+      "allEyewear": "All eyewear",
+      "allServices": "All services",
+      "allArticles": "All articles",
+      "readJournal": "Read the journal",
+      "readStory": "Read our story",
+      "seeFullRange": "See the full range",
+      "planVisit": "Plan your visit",
+      "backHome": "Back to home",
+      "view": "View",
+      "call": "Call",
+      "line": "LINE",
+      "openShopLocation": "Open the shop location"
+    },
+    "header": {
+      "tagline": "Family-owned optical shop · Nonthaburi",
+      "skip": "Skip to content",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "mainNav": "Main",
+      "mobileNav": "Mobile",
+      "mobileFooter": "{{phone}} · Somdet Road, Nonthaburi"
+    },
+    "footer": {
+      "blurb": "A family-owned optical shop in Nonthaburi. Come in, try frames on, and take your time.",
+      "explore": "Explore",
+      "visitShop": "Visit the shop",
+      "nav": "Footer"
+    },
+    "labels": {
+      "address": "Address",
+      "phone": "Phone",
+      "line": "LINE",
+      "facebook": "Facebook",
+      "hours": "Opening hours",
+      "hoursShort": "Hours",
+      "breadcrumb": "Breadcrumb",
+      "minRead": "{{count}} min read",
+      "updated": "Updated",
+      "filedUnder": "Filed under",
+      "inThisArticle": "In this article",
+      "keepReading": "Keep reading",
+      "relatedArticles": "Related articles",
+      "siteSections": "Site sections"
+    },
+    "hours": {
+      "weekdays": "Monday — Friday",
+      "weekend": "Saturday — Sunday",
+      "note": "Opening hours to be confirmed — please call before travelling."
+    },
+    "language": {
+      "label": "Language",
+      "switchTo": "Switch to {{language}}"
+    },
+    "social": {
+      "comingSoon": "Coming soon"
+    },
+    "principles": [
+      {
+        "title": "Personal recommendations",
+        "text": "We look at your face, listen to how you live, and suggest accordingly. Nobody is handed a catalogue and left alone."
+      },
+      {
+        "title": "Fitted properly",
+        "text": "Every frame is adjusted to your bridge, ears and cheekbones before it leaves the shop — and re-adjusted whenever it needs it."
+      },
+      {
+        "title": "Prescription done carefully",
+        "text": "Lens type, thickness and coating chosen for your prescription and your day, explained in plain language."
+      },
+      {
+        "title": "Fashion taken seriously",
+        "text": "Glasses sit at the centre of your face for every hour you are awake. They deserve the same thought as anything else you wear."
+      },
+      {
+        "title": "Family service",
+        "text": "The people who help you choose are the people who own the shop. You will see the same faces on your next visit."
+      },
+      {
+        "title": "A local shop",
+        "text": "We are on Somdet Road in Nonthaburi, and we would rather you came back than bought quickly."
+      }
+    ]
+  },
+
+  "visit": {
+    "eyebrow": "Visit us",
+    "title": "Somdet Road, Nonthaburi.",
+    "body": "Walk in without an appointment. Bring your prescription if you have one, and give yourself twenty unhurried minutes.",
+    "mapLabel": "Google Maps",
+    "mapTitle": "Map showing the location of KOJIKANE EYEWEAR in Nonthaburi"
+  },
+
+  "contactCta": {
+    "eyebrow": "Visit the shop",
+    "default": {
+      "title": "Come and try them on.",
+      "body": "A frame is very hard to judge from a photograph — including ours. Walk in, take your time, and let us fit them properly."
+    },
+    "fashion": {
+      "title": "Try the shape you keep looking at.",
+      "body": "Fashion frames are almost impossible to judge from a photograph. Come in, put three on, and see which one still looks like you after five minutes."
+    },
+    "prescription": {
+      "title": "Bring your prescription.",
+      "body": "Twenty minutes at the counter will tell you more than an hour of browsing. We will measure, explain the lens options in plain language, and fit whatever you choose."
+    },
+    "services": {
+      "title": "Walk in whenever suits you.",
+      "body": "No appointment needed for fitting, adjustment or a straight answer about lenses. If you would like a longer styling session, call ahead and we will keep time free."
+    },
+    "about": {
+      "title": "Come and say hello.",
+      "body": "We are on Somdet Road in Nonthaburi. Walk in without an appointment — for a repair, an adjustment, or just to see what is on the shelves."
+    },
+    "blog": {
+      "title": "Reading only gets you so far.",
+      "body": "Every article here ends the same way: come and try frames on. Twenty minutes in the shop beats an afternoon of research."
+    }
+  },
+
+  "home": {
+    "hero": {
+      "title": "Find the frame that feels like you.",
+      "body": "Fashion eyewear and prescription glasses, carefully selected for everyday life and personal style.",
+      "location": "Nonthaburi · Thailand"
+    },
+    "storyPoints": [
+      { "label": "Family owned", "value": "One family, one shop" },
+      { "label": "Location", "value": "Somdet Road, Nonthaburi" },
+      { "label": "What we do", "value": "Fashion & prescription eyewear" },
+      { "label": "How we work", "value": "Fitted in person, adjusted for life" }
+    ],
+    "discover": {
+      "eyebrow": "Discover your frame",
+      "title": "Two ways to see, one way to choose.",
+      "intro": "Whether you are here for a prescription or purely for the look, the process is the same: try on more than you expect to, and keep the one that still feels right after five minutes."
+    },
+    "philosophy": {
+      "eyebrow": "Why KOJIKANE",
+      "title": "More than a pair of glasses.",
+      "body": [
+        "Choosing glasses is not only about seeing clearly. It is about finding a frame that fits your face, your lifestyle, and the way you want to express yourself.",
+        "So we take our time. We look at proportion before we look at price, we say when something is not working, and we fit every frame properly before it leaves the shop."
+      ]
+    },
+    "family": {
+      "eyebrow": "The family",
+      "title": "A family business, built around people.",
+      "body": [
+        "For years, we have believed that choosing glasses should feel personal — an unhurried conversation, not a transaction across a counter.",
+        "KOJIKANE EYEWEAR is run by one family in Nonthaburi. The people who help you choose a frame are the people who own the shop, which means the advice you get is the advice we would give someone we expect to see again.",
+        "Many of our customers first came in for a repair, or because a neighbour sent them. That is still how most people find us."
+      ],
+      "pullQuote": "We would rather you came back than bought quickly."
+    },
+    "featured": {
+      "eyebrow": "Featured eyewear",
+      "title": "A selection, not a catalogue.",
+      "intro": "Six frames we are recommending at the moment, across fashion, prescription, classic, minimal and statement shapes. Everything here is in the shop — come and put them on.",
+      "note": "We do not sell online. Frames are photographed for reference only — fit, weight and colour are best judged in person, which is why every pair we sell is fitted at the shop."
+    },
+    "services": {
+      "eyebrow": "In the shop",
+      "title": "What we do at the counter.",
+      "intro": "Everything that happens after you choose a frame — measuring, fitting, lenses, and the small adjustments that keep a pair comfortable for years.",
+      "caption": "Every frame is adjusted before it leaves the shop — and re-adjusted whenever it needs it."
+    },
+    "journal": {
+      "eyebrow": "Journal",
+      "title": "THE KOJIKANE JOURNAL",
+      "subtitle": "Stories, guides, and ideas about eyewear, style, and everyday vision."
+    }
+  },
+
+  "eyewear": {
+    "categories": {
+      "fashion": {
+        "title": "Fashion Eyewear",
+        "tagline": "Frames that complete your look.",
+        "description": "Shapes with a point of view — sculptural acetate, coloured translucents, and silhouettes that change the balance of a face. Worn with or without correction.",
+        "highlights": [
+          "Statement acetate",
+          "Coloured & translucent",
+          "Seasonal shapes",
+          "Styling advice in store"
+        ]
+      },
+      "prescription": {
+        "title": "Prescription Eyewear",
+        "tagline": "Clear vision, comfortable fit, everyday confidence.",
+        "description": "Frames selected for how they sit, how light they feel after eight hours, and how well they carry your lenses. Fitted and adjusted in person.",
+        "highlights": [
+          "Single vision & progressive",
+          "Lightweight titanium",
+          "Anti-reflective coatings",
+          "Fitting and adjustment"
+        ]
+      }
+    },
+    "styles": {
+      "Fashion": "Fashion",
+      "Prescription": "Prescription",
+      "Classic": "Classic",
+      "Minimal": "Minimal",
+      "Statement": "Statement"
+    },
+    "frames": {
+      "aoi": {
+        "material": "Japanese acetate",
+        "note": "A rounded silhouette in translucent honey. Softens a strong jaw and reads warm against most skin tones."
+      },
+      "nagi": {
+        "material": "Beta titanium",
+        "note": "Barely there at the temples, under 12 grams on the nose. The frame people forget they are wearing."
+      },
+      "kumo": {
+        "material": "Matte acetate",
+        "note": "Oversized and square, with a flat top line. Best on faces that can carry width — try it before you decide."
+      },
+      "sumi": {
+        "material": "Tortoiseshell acetate",
+        "note": "A keyhole bridge and gentle panto shape. The frame we recommend most often, and the one people keep longest."
+      },
+      "hikari": {
+        "material": "Rimless titanium",
+        "note": "Nothing between you and the room. Suits mid-index single-vision lenses and quiet, professional dress."
+      },
+      "mine": {
+        "material": "Warm sand acetate",
+        "note": "An angular cat-eye with a lifted outer corner. Small on paper, decisive in person."
+      }
+    },
+    "index": {
+      "eyebrow": "The collection",
+      "title": "Frames worth making a journey for.",
+      "intro": "We keep a tight selection rather than a wall of stock — shapes we would happily wear ourselves, in materials that last. Everything shown here is in the shop.",
+      "meta": [
+        { "label": "Categories", "value": "Fashion · Prescription" },
+        { "label": "Materials", "value": "Acetate · Titanium · Combination" },
+        { "label": "Fitting", "value": "Included with every pair" },
+        { "label": "Where", "value": "Somdet Road, Nonthaburi" }
+      ],
+      "featuredEyebrow": "Currently in store",
+      "featuredTitle": "Six frames we keep recommending.",
+      "featuredIntro": "A cross-section of the shop, from the quietest titanium to the most decisive acetate. No prices online — we would rather talk you through the options in person."
+    },
+    "fashionPage": {
+      "meta": [
+        { "label": "Shapes", "value": "Round · Square · Cat-eye · Oversized" },
+        { "label": "Materials", "value": "Japanese acetate · Combination" },
+        { "label": "Lenses", "value": "Plano or prescription" },
+        { "label": "Styling", "value": "Free, in store" }
+      ],
+      "howEyebrow": "How we choose",
+      "howTitle": "Style is a decision, not a size.",
+      "body1": "A fashion frame does something a prescription frame does not have to: it changes the impression you make before you have said anything. That is worth taking seriously, and it is worth trying on more than you planned to.",
+      "body2Start": "Fashion eyewear here does not mean glasses without lenses. Almost everything on these shelves can carry a prescription — the difference is where we start from. ",
+      "body2Link": "See prescription eyewear",
+      "edits": [
+        {
+          "title": "Shape before colour",
+          "text": "Start with the outline. A frame that flatters in clear acetate will flatter in tortoiseshell — the reverse is rarely true."
+        },
+        {
+          "title": "Proportion, not size",
+          "text": "A frame should be about as wide as the widest part of your face. Everything after that is preference, not rule."
+        },
+        {
+          "title": "One decisive detail",
+          "text": "A lifted corner, a coloured temple, a heavier top line. One is style. Three is costume."
+        }
+      ],
+      "inStoreEyebrow": "In store now",
+      "inStoreTitle": "Frames with a point of view.",
+      "inStoreIntro": "Shapes that change the balance of a face. Try the one you would not normally reach for — it is usually the one people remember.",
+      "journalEyebrow": "From the journal",
+      "journalTitle": "Reading before you visit."
+    },
+    "prescriptionPage": {
+      "meta": [
+        { "label": "Lenses", "value": "Single vision · Progressive · Reading" },
+        { "label": "Materials", "value": "Titanium · Acetate · Rimless" },
+        { "label": "Bring", "value": "Your current prescription" },
+        { "label": "Adjustment", "value": "Free, for life" }
+      ],
+      "howEyebrow": "How we work",
+      "howTitle": "Comfort is measured, not promised.",
+      "body1": "A prescription pair has to do two jobs at once — sit well on your face and carry your lenses without distortion. Frame depth, bridge width and lens index all change the result, so we measure before we recommend.",
+      "body2Start": "Bring your most recent prescription from your eye examination. If you are choosing between a quiet frame and something with more character, you can have both — ",
+      "body2Link": "most fashion frames take prescription lenses",
+      "notes": [
+        {
+          "title": "Bring your prescription",
+          "text": "A current prescription from your eye examination lets us match frame depth and lens type properly on the first visit."
+        },
+        {
+          "title": "Weight is comfort",
+          "text": "How a frame feels in the first minute and after eight hours are two different things. We fit for the second one."
+        },
+        {
+          "title": "Adjustment is included",
+          "text": "Frames move with wear. Bring them back whenever they slip — adjustment is part of buying from us, not an extra."
+        }
+      ],
+      "inStoreEyebrow": "In store now",
+      "inStoreTitle": "Light frames, quiet shapes.",
+      "inStoreIntro": "Titanium, rimless and classic acetate — the frames that suit long days and stronger prescriptions.",
+      "includedEyebrow": "What is included",
+      "includedTitle": "Everything after you choose.",
+      "journalEyebrow": "From the journal",
+      "journalTitle": "Useful before your visit."
+    }
+  },
+
+  "services": {
+    "page": {
+      "eyebrow": "Services",
+      "title": "The part that happens at the counter.",
+      "intro": "Choosing a frame takes twenty minutes. Making it fit, choosing the right lenses and keeping it comfortable for years is the rest of the job — and it is the part we care most about.",
+      "meta": [
+        { "label": "Appointments", "value": "Not required" },
+        { "label": "Adjustment", "value": "Free for our frames" },
+        { "label": "Consultation", "value": "Free, about 15 minutes" },
+        { "label": "Where", "value": "Somdet Road, Nonthaburi" }
+      ],
+      "honestEyebrow": "No upselling",
+      "honestTitle": "We will tell you what you do not need.",
+      "honestBody": [
+        "Lens coatings, indexes and add-ons are where most opticians make their margin. We would rather explain the difference honestly and let you decide — including when the cheaper option is the better one for your prescription.",
+        "The same goes for frames. If something does not suit you, we will say so, even if it is the most expensive pair on the shelf."
+      ],
+      "faqEyebrow": "Questions",
+      "faqTitle": "Before you come in."
+    },
+    "items": {
+      "prescription-eyewear": {
+        "title": "Prescription Eyewear",
+        "summary": "Frames matched to your prescription, assembled and checked in store.",
+        "detail": "Bring your current prescription and we will help you choose a frame that suits both your face and your lenses — frame depth, bridge width and lens type all affect how the finished pair performs. Single vision, progressive and reading lenses are available.",
+        "duration": "Allow 30–45 minutes"
+      },
+      "frame-fitting": {
+        "title": "Frame Fitting",
+        "summary": "Bridge, temple length and pantoscopic tilt set to your face.",
+        "detail": "A frame that fits sits level, rests on the bridge rather than the cheeks, and stays put when you look down. We measure, fit and adjust before you leave with them.",
+        "duration": "Allow 15–20 minutes"
+      },
+      "lens-consultation": {
+        "title": "Lens Consultation",
+        "summary": "Straight talk about lens material, thickness and coatings.",
+        "detail": "We explain the practical differences between lens indexes, anti-reflective and hard coatings, and tinted or photochromic options — then recommend what actually suits your prescription and your day, without upselling.",
+        "duration": "Allow 15 minutes"
+      },
+      "frame-adjustment": {
+        "title": "Frame Adjustment",
+        "summary": "Free realignment for frames bought with us, any time.",
+        "detail": "Glasses loosen, temples splay, nose pads shift. Bring them in and we will bring them back to true. There is no charge and no appointment needed for frames purchased at KOJIKANE.",
+        "duration": "Usually while you wait"
+      },
+      "eyewear-styling": {
+        "title": "Eyewear Styling",
+        "summary": "An honest second opinion on shape, colour and proportion.",
+        "detail": "We will pull frames you would not have picked up yourself, tell you when something is not working, and narrow six options down to two. Bringing someone whose taste you trust is encouraged.",
+        "duration": "Allow 30 minutes"
+      },
+      "after-sales-service": {
+        "title": "After-Sales Service",
+        "summary": "Nose pads, screws, cleaning and repairs after you buy.",
+        "detail": "Small parts wear out long before a good frame does. We replace nose pads and screws, clean frames ultrasonically, and advise on repair when something breaks.",
+        "duration": "Usually while you wait"
+      }
+    },
+    "faqs": [
+      {
+        "question": "Do I need an appointment?",
+        "answer": "No. KOJIKANE EYEWEAR is a walk-in shop. If you would like a longer styling or lens consultation, call ahead on 080-519-6633 and we will keep time free for you."
+      },
+      {
+        "question": "Can I bring my own prescription?",
+        "answer": "Yes, and we encourage it. Bring your most recent prescription from your eye examination and we will work from it when recommending frames and lenses."
+      },
+      {
+        "question": "Can you put prescription lenses into a fashion frame?",
+        "answer": "Often, yes. It depends on the shape and depth of the frame and on your prescription. Bring the frame to the shop and we will tell you honestly whether it will work well."
+      },
+      {
+        "question": "Do you adjust glasses bought elsewhere?",
+        "answer": "We are happy to look at them. Adjustment is free for frames bought at KOJIKANE; for frames from elsewhere, ask us in store and we will tell you what we can do."
+      },
+      {
+        "question": "How long does a new pair take?",
+        "answer": "It depends on the lenses. Simple single-vision pairs are usually quick; specialist lenses and coatings take longer. We will give you a realistic date when you order."
+      }
+    ]
+  },
+
+  "about": {
+    "intro": "We are a small shop with one counter, a considered selection of frames, and enough time to help you choose properly.",
+    "storyEyebrow": "Our story",
+    "storyTitle": "Built slowly, on returning customers.",
+    "storyExtra": "We are not a chain and we do not sell online. What we can offer is time, an honest opinion, and someone who will still be at the counter when you come back to have your frames straightened.",
+    "captionExterior": "The shopfront on Somdet Road.",
+    "captionInterior": "One counter, one wall of frames, and time to choose.",
+    "figcaptionFamily": "The family behind KOJIKANE EYEWEAR — photograph to be replaced with the real portrait.",
+    "figcaptionExterior": "The shopfront on Somdet Road, Nonthaburi.",
+    "figcaptionInterior": "Inside the shop."
+  },
+
+  "blog": {
+    "article": {
+      "asideTitle": "Visit the shop",
+      "asideBody": "Somdet Road, Nonthaburi. Walk in and try frames on — no appointment needed.",
+      "authorNote": "Written by the team at KOJIKANE EYEWEAR, a family-owned optical shop on Somdet Road, Nonthaburi. General guidance only — for anything concerning your eye health, please see a qualified eye care professional."
+    },
+    "categories": {
+      "Style Guide": "Style Guide",
+      "Frame Guide": "Frame Guide",
+      "Eyewear Care": "Eyewear Care",
+      "Trends": "Trends",
+      "Prescription": "Prescription"
+    }
+  },
+
+  "contact": {
+    "eyebrow": "Visit us",
+    "title": "544 Somdet Road, Nonthaburi.",
+    "intro": "One shop, one counter, no appointment necessary. Come in for a frame, a fitting, an adjustment, or just to look.",
+    "meta": [
+      { "label": "Appointments", "value": "Not required" },
+      { "label": "Parking", "value": "On Somdet Road" }
+    ],
+    "gettingHereEyebrow": "Getting here",
+    "gettingHereTitle": "Finding the shop.",
+    "arrival": [
+      {
+        "title": "By car",
+        "text": "We are on Somdet Road in Tha Sai, Mueang Nonthaburi. Search “KOJIKANE EYEWEAR” or the address in Google Maps and follow the directions link on this page."
+      },
+      {
+        "title": "Before you set off",
+        "text": "Opening hours are being confirmed. A quick call on 080-519-6633 or a message on LINE will save you a wasted journey."
+      },
+      {
+        "title": "What to bring",
+        "text": "Your current prescription if you have one, the glasses you wear now, and — if you can — someone whose opinion you trust."
+      }
+    ],
+    "messageEyebrow": "Message us",
+    "messageTitle": "LINE is the fastest way to reach us.",
+    "messageBody": "Send a photo of your prescription or the frames you are considering, and we will tell you what we have before you make the trip."
+  },
+
+  "notFound": {
+    "eyebrow": "404",
+    "title": "That page is not on the shelf.",
+    "body": "The link may be old, or the page may have moved. Everything else is still here."
+  },
+
+  "legal": {
+    "eyebrow": "Legal",
+    "questionsHeading": "Questions",
+    "contactHeading": "Contact",
+    "questionsBody": "Call {{phone}} or message us on LINE at {{line}}.",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "A short, plain-language summary of what we do with personal information. This page should be reviewed by the shop before launch.",
+      "sections": [
+        {
+          "heading": "What this website collects",
+          "body": "This website does not have accounts, a shopping basket, or a contact form. It does not ask you for personal information, and it does not set advertising cookies. It stores one small cookie only if you choose a language, so the site remembers your choice. If analytics are added later, this page will be updated to say which service is used and what it records."
+        },
+        {
+          "heading": "Information you send us directly",
+          "body": "If you contact us by phone, LINE or Facebook, we see whatever you choose to share — typically your name, your message and, if you send one, a photograph of your prescription. We use it only to answer you and to prepare your order."
+        },
+        {
+          "heading": "Information kept in the shop",
+          "body": "When you buy glasses from us we keep the record needed to make and service them, including your prescription and the frame details. This is kept so that we can remake or adjust your glasses later. We do not sell it or share it for marketing."
+        },
+        {
+          "heading": "Third-party services",
+          "body": "Pages on this site may embed a Google Maps view so you can find the shop. Links to LINE and Facebook take you to those services, which have their own privacy policies."
+        },
+        {
+          "heading": "Your choices",
+          "body": "You can ask us what we hold about you, ask for it to be corrected, or ask us to delete it. Call the shop or send us a message and we will deal with it."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "intro": "The short version: this is an information website for a physical shop, and nothing here is a purchase or a medical opinion.",
+      "sections": [
+        {
+          "heading": "About this website",
+          "body": "This site presents KOJIKANE EYEWEAR, a family-owned optical shop in Nonthaburi. It is an information website. Nothing can be bought through it, and no order is placed by browsing it."
+        },
+        {
+          "heading": "Frames and availability",
+          "body": "Frames shown here are photographed for reference. Stock changes, and a particular frame may not be in the shop on the day you visit. Please call or message before travelling if you have your heart set on something specific."
+        },
+        {
+          "heading": "Guidance, not advice",
+          "body": "Articles in the Journal are general guidance about eyewear and style. They are not eye care advice and are not a substitute for an eye examination by a qualified professional."
+        },
+        {
+          "heading": "Content and images",
+          "body": "Text and photographs on this site belong to the shop and may not be reproduced without permission. Some images are temporary placeholders and will be replaced with the shop’s own photography."
+        },
+        {
+          "heading": "Links to other sites",
+          "body": "Links to LINE, Facebook and Google Maps are provided for convenience. We are not responsible for the content of those services."
+        },
+        {
+          "heading": "Changes",
+          "body": "These terms may be updated as the site grows. The current version is always the one published here. This page should be reviewed by the shop before launch."
+        }
+      ]
+    }
+  },
+
+  "seo": {
+    "home": {
+      "title": "KOJIKANE EYEWEAR — Fashion & Prescription Eyewear in Nonthaburi",
+      "description": "A family-owned optical shop on Somdet Road, Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person.",
+      "keywords": [
+        "eyewear Nonthaburi",
+        "glasses shop Nonthaburi",
+        "prescription glasses Nonthaburi",
+        "fashion eyewear Thailand",
+        "optical shop Somdet Road"
+      ]
+    },
+    "eyewear": {
+      "title": "Eyewear — Fashion & Prescription Frames",
+      "description": "Browse the eyewear at KOJIKANE: fashion frames with a point of view and prescription glasses fitted properly. Selected in Nonthaburi, tried on in person.",
+      "keywords": ["eyewear Nonthaburi", "eyeglass frames Thailand", "optical shop Nonthaburi"]
+    },
+    "fashion": {
+      "title": "Fashion Eyewear — Frames That Complete Your Look",
+      "description": "Fashion eyewear at KOJIKANE in Nonthaburi: sculptural acetate, coloured translucents and shapes with a point of view. Worn with or without a prescription.",
+      "keywords": [
+        "fashion eyewear Nonthaburi",
+        "fashion glasses Thailand",
+        "non-prescription glasses",
+        "designer frames Nonthaburi"
+      ]
+    },
+    "prescription": {
+      "title": "Prescription Eyewear — Fitted Properly, in Person",
+      "description": "Prescription glasses at KOJIKANE in Nonthaburi. Frames matched to your lenses, measured and fitted in store, with free adjustment for as long as you own them.",
+      "keywords": [
+        "prescription glasses Nonthaburi",
+        "prescription eyewear Thailand",
+        "progressive lenses Nonthaburi",
+        "optician Nonthaburi"
+      ]
+    },
+    "services": {
+      "title": "Optical Services — Fitting, Lenses & Adjustment",
+      "description": "Frame fitting, lens consultation, adjustment, eyewear styling and after-sales service at KOJIKANE EYEWEAR, Somdet Road, Nonthaburi. Walk-ins welcome.",
+      "keywords": [
+        "optician services Nonthaburi",
+        "frame fitting Nonthaburi",
+        "lens consultation Thailand",
+        "glasses adjustment Nonthaburi"
+      ]
+    },
+    "about": {
+      "title": "About Us — A Family-Owned Optical Shop in Nonthaburi",
+      "description": "KOJIKANE EYEWEAR is run by one family on Somdet Road, Nonthaburi. The people who help you choose a frame are the people who own the shop.",
+      "keywords": [
+        "family optical shop Nonthaburi",
+        "about KOJIKANE EYEWEAR",
+        "local optician Nonthaburi"
+      ]
+    },
+    "blog": {
+      "title": "The KOJIKANE Journal — Eyewear Guides & Style Notes",
+      "description": "Stories, guides, and ideas about eyewear, style, and everyday vision — written by a family-owned optical shop in Nonthaburi.",
+      "keywords": [
+        "eyewear blog",
+        "how to choose glasses",
+        "glasses care guide",
+        "eyewear trends Thailand"
+      ]
+    },
+    "contact": {
+      "title": "Visit Our Store — KOJIKANE EYEWEAR, Nonthaburi",
+      "description": "Find KOJIKANE EYEWEAR at 544 Somdet Road, Tha Sai, Mueang Nonthaburi 11000. Phone 080-519-6633, LINE Fisho.naka199. Walk-ins welcome.",
+      "keywords": [
+        "eyewear shop Nonthaburi address",
+        "optical shop Somdet Road",
+        "KOJIKANE EYEWEAR contact"
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How KOJIKANE EYEWEAR handles the limited personal information shared with us."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms covering the use of the KOJIKANE EYEWEAR website."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "This page could not be found."
+    },
+    "siteDescription": "KOJIKANE EYEWEAR is a family-owned optical shop in Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person."
+  }
+}

@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --shell-gutter: clamp(1.25rem, 4vw, 3.5rem);
+    --header-height: 4.5rem;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchor targets clear of the sticky header. */
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    /* No horizontal scroll on mobile, ever. */
+    overflow-x: hidden;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-ink text-paper;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-paper;
+  }
+
+  /* Thai glyphs fall back cleanly wherever they appear inline. */
+  :lang(th) {
+    @apply font-thai;
+  }
+
+  /*
+   * Thai typography.
+   * The latin display face has no Thai glyphs, so Thai carries the whole
+   * site on Noto Sans Thai. Thai also needs more leading than latin and
+   * must not be tracked tightly — negative letter-spacing breaks the
+   * vowel and tone marks that sit above and below the baseline.
+   */
+  html[lang='th'] body,
+  html[lang='th'] .font-display {
+    font-family: var(--font-thai), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html[lang='th'] .text-display-xl,
+  html[lang='th'] .text-display-lg,
+  html[lang='th'] .text-display-md,
+  html[lang='th'] .text-display-sm {
+    line-height: 1.24;
+    letter-spacing: 0;
+  }
+
+  html[lang='th'] .text-lede {
+    line-height: 1.85;
+    letter-spacing: 0;
+  }
+
+  /* Uppercase does nothing to Thai script; keep the tracking usable. */
+  html[lang='th'] .tracking-widest2 {
+    letter-spacing: 0.12em;
+  }
+  html[lang='th'] .tracking-widest3 {
+    letter-spacing: 0.18em;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-[var(--shell-gutter)];
+  }
+
+  .rule {
+    @apply border-t border-ink/10;
+  }
+
+  .eyebrow {
+    @apply text-eyebrow font-medium uppercase tracking-widest2 text-stone;
+  }
+
+  /* Understated editorial link underline that grows on hover. */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-[-2px] left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* Slow image reveal on hover, used on editorial cards. */
+  .media-zoom img {
+    @apply transition-transform duration-[1200ms] ease-editorial will-change-transform;
+  }
+  .group:hover .media-zoom img,
+  .group:focus-within .media-zoom img {
+    @apply scale-[1.035];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Vertical rhythm helper for editorial columns. */
+  .hanging-indent {
+    text-indent: -0.4em;
+    padding-left: 0.4em;
+  }
+}
+
+/* Scroll-reveal: content is visible by default so it never depends on JS. */
+[data-reveal] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal='pending'] {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  [data-reveal='shown'] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

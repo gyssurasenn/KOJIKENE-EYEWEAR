@@ -1,0 +1,11 @@
+<!-- Temporary wordmark placeholder. Replace with the shop's real logo file. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 128" width="512" height="128">
+  <rect width="512" height="128" fill="none"/>
+  <g fill="none" stroke="#16140F" stroke-width="3" stroke-linecap="round">
+    <circle cx="42" cy="64" r="24"/>
+    <circle cx="118" cy="64" r="24"/>
+    <path d="M66 60c6-5 22-5 28 0M18 60l-10-8M142 60l10-8"/>
+  </g>
+  <text x="176" y="76" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="7" fill="#16140F">KOJIKANE</text>
+  <text x="178" y="102" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="6" fill="#7C766C">EYEWEAR</text>
+</svg>
