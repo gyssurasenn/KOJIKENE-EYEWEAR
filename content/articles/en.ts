@@ -334,7 +334,7 @@ export const articlesEn: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Our [frame fitting and adjustment](/services) is included with every pair bought at the shop, for as long as you own them. [Come and see us](/contact) on Somdet Road in Nonthaburi.',
+        text: 'Our [frame fitting and adjustment](/services) is included with every pair bought at the shop, for as long as you own them. [Come and see us](/contact) on Samakkhi Road in Nonthaburi.',
       },
     ],
   },

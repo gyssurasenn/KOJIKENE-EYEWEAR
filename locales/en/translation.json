@@ -42,7 +42,7 @@
       "closeMenu": "Close menu",
       "mainNav": "Main",
       "mobileNav": "Mobile",
-      "mobileFooter": "{{phone}} · Somdet Road, Nonthaburi"
+      "mobileFooter": "{{phone}} · Samakkhi Road, Nonthaburi"
     },
     "footer": {
       "blurb": "A family-owned optical shop in Nonthaburi. Come in, try frames on, and take your time.",
@@ -101,14 +101,14 @@
       },
       {
         "title": "A local shop",
-        "text": "We are on Somdet Road in Nonthaburi, and we would rather you came back than bought quickly."
+        "text": "We are on Samakkhi Road in Nonthaburi, and we would rather you came back than bought quickly."
       }
     ]
   },
 
   "visit": {
     "eyebrow": "Visit us",
-    "title": "Somdet Road, Nonthaburi.",
+    "title": "Samakkhi Road, Nonthaburi.",
     "body": "Walk in without an appointment. Bring your prescription if you have one, and give yourself twenty unhurried minutes.",
     "mapLabel": "Google Maps",
     "mapTitle": "Map showing the location of KOJIKANE EYEWEAR in Nonthaburi"
@@ -134,7 +134,7 @@
     },
     "about": {
       "title": "Come and say hello.",
-      "body": "We are on Somdet Road in Nonthaburi. Walk in without an appointment — for a repair, an adjustment, or just to see what is on the shelves."
+      "body": "We are on Samakkhi Road in Nonthaburi. Walk in without an appointment — for a repair, an adjustment, or just to see what is on the shelves."
     },
     "blog": {
       "title": "Reading only gets you so far.",
@@ -150,7 +150,7 @@
     },
     "storyPoints": [
       { "label": "Family owned", "value": "One family, one shop" },
-      { "label": "Location", "value": "Somdet Road, Nonthaburi" },
+      { "label": "Location", "value": "Samakkhi Road, Nonthaburi" },
       { "label": "What we do", "value": "Fashion & prescription eyewear" },
       { "label": "How we work", "value": "Fitted in person, adjusted for life" }
     ],
@@ -262,7 +262,7 @@
         { "label": "Categories", "value": "Fashion · Prescription" },
         { "label": "Materials", "value": "Acetate · Titanium · Combination" },
         { "label": "Fitting", "value": "Included with every pair" },
-        { "label": "Where", "value": "Somdet Road, Nonthaburi" }
+        { "label": "Where", "value": "Samakkhi Road, Nonthaburi" }
       ],
       "featuredEyebrow": "Currently in store",
       "featuredTitle": "Six frames we keep recommending.",
@@ -345,7 +345,7 @@
         { "label": "Appointments", "value": "Not required" },
         { "label": "Adjustment", "value": "Free for our frames" },
         { "label": "Consultation", "value": "Free, about 15 minutes" },
-        { "label": "Where", "value": "Somdet Road, Nonthaburi" }
+        { "label": "Where", "value": "Samakkhi Road, Nonthaburi" }
       ],
       "honestEyebrow": "No upselling",
       "honestTitle": "We will tell you what you do not need.",
@@ -423,18 +423,18 @@
     "storyEyebrow": "Our story",
     "storyTitle": "Built slowly, on returning customers.",
     "storyExtra": "We are not a chain and we do not sell online. What we can offer is time, an honest opinion, and someone who will still be at the counter when you come back to have your frames straightened.",
-    "captionExterior": "The shopfront on Somdet Road.",
+    "captionExterior": "The shopfront on Samakkhi Road.",
     "captionInterior": "One counter, one wall of frames, and time to choose.",
     "figcaptionFamily": "The family behind KOJIKANE EYEWEAR — photograph to be replaced with the real portrait.",
-    "figcaptionExterior": "The shopfront on Somdet Road, Nonthaburi.",
+    "figcaptionExterior": "The shopfront on Samakkhi Road, Nonthaburi.",
     "figcaptionInterior": "Inside the shop."
   },
 
   "blog": {
     "article": {
       "asideTitle": "Visit the shop",
-      "asideBody": "Somdet Road, Nonthaburi. Walk in and try frames on — no appointment needed.",
-      "authorNote": "Written by the team at KOJIKANE EYEWEAR, a family-owned optical shop on Somdet Road, Nonthaburi. General guidance only — for anything concerning your eye health, please see a qualified eye care professional."
+      "asideBody": "Samakkhi Road, Nonthaburi. Walk in and try frames on — no appointment needed.",
+      "authorNote": "Written by the team at KOJIKANE EYEWEAR, a family-owned optical shop on Samakkhi Road, Nonthaburi. General guidance only — for anything concerning your eye health, please see a qualified eye care professional."
     },
     "categories": {
       "Style Guide": "Style Guide",
@@ -447,18 +447,18 @@
 
   "contact": {
     "eyebrow": "Visit us",
-    "title": "544 Somdet Road, Nonthaburi.",
+    "title": "544 Samakkhi Road, Nonthaburi.",
     "intro": "One shop, one counter, no appointment necessary. Come in for a frame, a fitting, an adjustment, or just to look.",
     "meta": [
       { "label": "Appointments", "value": "Not required" },
-      { "label": "Parking", "value": "On Somdet Road" }
+      { "label": "Parking", "value": "On Samakkhi Road" }
     ],
     "gettingHereEyebrow": "Getting here",
     "gettingHereTitle": "Finding the shop.",
     "arrival": [
       {
         "title": "By car",
-        "text": "We are on Somdet Road in Tha Sai, Mueang Nonthaburi. Search “KOJIKANE EYEWEAR” or the address in Google Maps and follow the directions link on this page."
+        "text": "We are on Samakkhi Road in Tha Sai, Mueang Nonthaburi. Search “KOJIKANE EYEWEAR” or the address in Google Maps and follow the directions link on this page."
       },
       {
         "title": "Before you set off",
@@ -546,13 +546,13 @@
   "seo": {
     "home": {
       "title": "KOJIKANE EYEWEAR — Fashion & Prescription Eyewear in Nonthaburi",
-      "description": "A family-owned optical shop on Somdet Road, Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person.",
+      "description": "A family-owned optical shop on Samakkhi Road, Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person.",
       "keywords": [
         "eyewear Nonthaburi",
         "glasses shop Nonthaburi",
         "prescription glasses Nonthaburi",
         "fashion eyewear Thailand",
-        "optical shop Somdet Road"
+        "optical shop Samakkhi Road"
       ]
     },
     "eyewear": {
@@ -582,7 +582,7 @@
     },
     "services": {
       "title": "Optical Services — Fitting, Lenses & Adjustment",
-      "description": "Frame fitting, lens consultation, adjustment, eyewear styling and after-sales service at KOJIKANE EYEWEAR, Somdet Road, Nonthaburi. Walk-ins welcome.",
+      "description": "Frame fitting, lens consultation, adjustment, eyewear styling and after-sales service at KOJIKANE EYEWEAR, Samakkhi Road, Nonthaburi. Walk-ins welcome.",
       "keywords": [
         "optician services Nonthaburi",
         "frame fitting Nonthaburi",
@@ -592,7 +592,7 @@
     },
     "about": {
       "title": "About Us — A Family-Owned Optical Shop in Nonthaburi",
-      "description": "KOJIKANE EYEWEAR is run by one family on Somdet Road, Nonthaburi. The people who help you choose a frame are the people who own the shop.",
+      "description": "KOJIKANE EYEWEAR is run by one family on Samakkhi Road, Nonthaburi. The people who help you choose a frame are the people who own the shop.",
       "keywords": [
         "family optical shop Nonthaburi",
         "about KOJIKANE EYEWEAR",
@@ -611,10 +611,10 @@
     },
     "contact": {
       "title": "Visit Our Store — KOJIKANE EYEWEAR, Nonthaburi",
-      "description": "Find KOJIKANE EYEWEAR at 544 Somdet Road, Tha Sai, Mueang Nonthaburi 11000. Phone 080-519-6633, LINE Fisho.naka199. Walk-ins welcome.",
+      "description": "Find KOJIKANE EYEWEAR at 544 Samakkhi Road, Tha Sai, Mueang Nonthaburi 11000. Phone 080-519-6633, LINE Fisho.naka199. Walk-ins welcome.",
       "keywords": [
         "eyewear shop Nonthaburi address",
-        "optical shop Somdet Road",
+        "optical shop Samakkhi Road",
         "KOJIKANE EYEWEAR contact"
       ]
     },

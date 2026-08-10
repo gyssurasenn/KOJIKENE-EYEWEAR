@@ -61,7 +61,7 @@ export const images = {
 
   storeExterior: {
     src: `${DIR}/placeholder-store.webp`,
-    alt: 'Shopfront of KOJIKANE EYEWEAR on Somdet Road, Nonthaburi',
+    alt: 'Shopfront of KOJIKANE EYEWEAR on Samakkhi Road, Nonthaburi',
     ...LANDSCAPE,
     placeholder: true,
   } as ImageAsset,

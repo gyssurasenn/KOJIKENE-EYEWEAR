@@ -36,7 +36,7 @@ export const contact = {
 } as const;
 
 export const address = {
-  streetAddress: '544 ถนนสมเด็จ ตำบลท่าทราย',
+  streetAddress: '544 ถนนสามัคคี ตำบลท่าทราย',
   district: 'อำเภอเมืองนนทบุรี',
   province: 'จังหวัดนนทบุรี',
   postalCode: '11000',
@@ -44,19 +44,19 @@ export const address = {
   countryCode: 'TH',
   /** Romanised, for the English pages and structured data. */
   romanised: {
-    streetAddress: '544 Somdet Road, Tha Sai',
+    streetAddress: '544 Samakkhi Road, Tha Sai',
     locality: 'Mueang Nonthaburi',
     region: 'Nonthaburi',
   },
   /** Rendered as a block on the Contact page and in the footer. */
   lines: [
-    '544 ถนนสมเด็จ ตำบลท่าทราย',
+    '544 ถนนสามัคคี ตำบลท่าทราย',
     'อำเภอเมืองนนทบุรี',
     'จังหวัดนนทบุรี 11000',
     'Thailand',
   ],
   linesEn: [
-    '544 Somdet Road, Tha Sai',
+    '544 Samakkhi Road, Tha Sai',
     'Mueang Nonthaburi',
     'Nonthaburi 11000',
     'Thailand',
@@ -65,10 +65,10 @@ export const address = {
   geo: null as { latitude: number; longitude: number } | null,
   mapsSearchUrl:
     'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('KOJIKANE EYEWEAR 544 ถนนสมเด็จ ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000'),
+    encodeURIComponent('KOJIKANE EYEWEAR 544 ถนนสามัคคี ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000'),
   mapsDirectionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=' +
-    encodeURIComponent('544 ถนนสมเด็จ ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000'),
+    encodeURIComponent('544 ถนนสามัคคี ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000'),
   /** Paste the <iframe src="..."> value from Google Maps → Share → Embed. */
   mapsEmbedUrl: '' as string,
 } as const;
