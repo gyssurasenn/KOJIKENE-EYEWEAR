@@ -69,8 +69,11 @@ export const address = {
   mapsDirectionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=' +
     encodeURIComponent('544 ถนนสามัคคี ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000'),
-  /** Paste the <iframe src="..."> value from Google Maps → Share → Embed. */
-  mapsEmbedUrl: '' as string,
+  /** Google Maps embed generated from the canonical shop search query. */
+  mapsEmbedUrl:
+    'https://www.google.com/maps?q=' +
+    encodeURIComponent('KOJIKANE EYEWEAR 544 ถนนสามัคคี ตำบลท่าทราย อำเภอเมืองนนทบุรี จังหวัดนนทบุรี 11000') +
+    '&output=embed',
 } as const;
 
 /**
@@ -80,12 +83,12 @@ export const address = {
 export const openingHours = {
   isPlaceholder: true,
   display: [
-    { labelKey: 'weekdays', hours: '10:00 — 19:00' },
-    { labelKey: 'weekend', hours: '10:00 — 18:00' },
+    { labelKey: 'weekdays', hours: '10:30 — 19:00' },
+    { labelKey: 'weekend', hours: '10:30 — 18:30' },
   ],
   schema: [
-    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '10:00', closes: '19:00' },
-    { days: ['Saturday', 'Sunday'], opens: '10:00', closes: '18:00' },
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '10:30', closes: '19:00' },
+    { days: ['Saturday', 'Sunday'], opens: '10:30', closes: '18:30' },
   ],
 } as const;
 

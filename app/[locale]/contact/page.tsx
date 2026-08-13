@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { VisitStore } from '@/components/sections/VisitStore';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -85,26 +84,6 @@ export default async function ContactPage({ params }: PageProps) {
             ))}
           </div>
 
-          <Reveal className="mt-16 grid gap-8 md:grid-cols-2">
-            <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
-              <Image
-                src={images.storeExterior.src}
-                alt={images.storeExterior.alt}
-                fill
-                sizes="(min-width: 768px) 45vw, 100vw"
-                className="object-cover"
-              />
-            </figure>
-            <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
-              <Image
-                src={images.storeInterior.src}
-                alt={images.storeInterior.alt}
-                fill
-                sizes="(min-width: 768px) 45vw, 100vw"
-                className="object-cover"
-              />
-            </figure>
-          </Reveal>
         </div>
       </section>
 
