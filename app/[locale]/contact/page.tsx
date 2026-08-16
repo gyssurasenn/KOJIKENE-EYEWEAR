@@ -3,6 +3,7 @@ import { PageHeader } from '@/components/layout/PageHeader';
 import { VisitStore } from '@/components/sections/VisitStore';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
+import { SocialLinks } from '@/components/ui/SocialLinks';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getT, tList } from '@/i18n/server';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
@@ -113,18 +114,7 @@ export default async function ContactPage({ params }: PageProps) {
                 {t('common.cta.call')} {contact.phone}
               </a>
             </div>
-            <p className="mt-8 text-sm text-stone">
-              {t('common.labels.facebook')}:{' '}
-              <a
-                href={contact.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                lang="th"
-                className="link-underline font-thai text-ink"
-              >
-                {contact.facebookName}
-              </a>
-            </p>
+            <SocialLinks className="mt-8 justify-center" />
           </Reveal>
         </div>
       </section>

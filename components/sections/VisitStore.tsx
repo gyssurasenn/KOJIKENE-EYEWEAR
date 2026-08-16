@@ -3,7 +3,7 @@ import { ButtonLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { getT } from '@/i18n/server';
 import type { Locale } from '@/i18n/config';
-import { address, contact, openingHours } from '@/lib/site';
+import { address, contact, openingHours, socialLinks } from '@/lib/site';
 
 /**
  * The "Visit Our Store" block. Used on the homepage and the Contact page.
@@ -21,6 +21,7 @@ export async function VisitStore({
   const t = await getT(locale);
   const isThai = locale === 'th';
   const addressLines = isThai ? address.lines : address.linesEn;
+  const onlineLinks = socialLinks.filter((social) => social.label !== 'LINE');
 
   if (!showImage) {
     return (
@@ -29,6 +30,7 @@ export async function VisitStore({
         Heading={Heading}
         isThai={isThai}
         addressLines={addressLines}
+        onlineLinks={onlineLinks}
       />
     );
   }
@@ -91,17 +93,22 @@ export async function VisitStore({
           </div>
 
           <div className="grid gap-2 sm:grid-cols-[9rem_1fr] sm:gap-6">
-            <dt className="eyebrow pt-1">{t('common.labels.facebook')}</dt>
+            <dt className="eyebrow pt-1">{t('common.labels.social')}</dt>
             <dd>
-              <a
-                href={contact.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                lang="th"
-                className="link-underline font-thai text-lg text-ink transition-colors hover:text-graphite"
-              >
-                {contact.facebookName}
-              </a>
+              <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                {onlineLinks.map((social) => (
+                  <li key={social.label}>
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline text-lg text-ink transition-colors hover:text-graphite"
+                    >
+                      {social.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </dd>
           </div>
 
@@ -145,11 +152,13 @@ function ContactMapBlock({
   Heading,
   isThai,
   addressLines,
+  onlineLinks,
 }: {
   t: TFunction;
   Heading: 'h1' | 'h2';
   isThai: boolean;
   addressLines: readonly string[];
+  onlineLinks: readonly { label: string; href: string; handle: string }[];
 }) {
   return (
     <div className="grid grid-cols-1 items-stretch gap-5 rounded-xl bg-gradient-to-br from-white to-paper p-2 shadow-lg md:p-5 lg:grid-cols-2">
@@ -219,31 +228,45 @@ function ContactMapBlock({
               ))}
             </dd>
           </div>
+
+          <div className="grid gap-2 sm:grid-cols-[9rem_1fr] sm:gap-6">
+            <dt className="eyebrow pt-1">{t('common.labels.social')}</dt>
+            <dd>
+              <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                {onlineLinks.map((social) => (
+                  <li key={social.label}>
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline text-lg text-ink transition-colors hover:text-graphite"
+                    >
+                      {social.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </div>
         </dl>
       </Reveal>
 
       <Reveal delay={80}>
         <div className="flex h-full flex-col gap-4">
-          <div className="flex items-center justify-center gap-4">
-            <a
-              href={contact.facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t('common.labels.facebook')}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-xl font-bold text-white shadow-md transition hover:scale-110 hover:shadow-lg"
-            >
-              f
-            </a>
-            <a
-              href={contact.lineUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t('common.labels.line')}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#06C755] text-[0.65rem] font-black uppercase tracking-[-0.04em] text-white shadow-md transition hover:scale-110 hover:shadow-lg"
-            >
-              LINE
-            </a>
-          </div>
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            {socialLinks.map((social) => (
+              <li key={social.label}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline text-[0.6875rem] font-medium uppercase tracking-widest2 text-stone transition-colors hover:text-ink"
+                >
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
           <ContactMapPanel t={t} />
         </div>
       </Reveal>

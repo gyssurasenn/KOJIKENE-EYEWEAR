@@ -2,9 +2,9 @@
 export function slugify(input: string): string {
   return input
     .toLowerCase()
-    .normalize('NFKD')
+    .normalize('NFKC')
     .replace(/[’'"]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/[^\p{Letter}\p{Mark}\p{Number}]+/gu, '-')
     .replace(/^-+|-+$/g, '');
 }
 

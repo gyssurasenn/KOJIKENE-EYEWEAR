@@ -30,8 +30,10 @@ export const contact = {
   lineUrl: 'https://line.me/ti/p/~Fisho.naka199',
   facebookName: 'แว่นตา โคจิ คานะ : KojiKane',
   facebookUrl: 'https://www.facebook.com/search/top?q=แว่นตา โคจิ คานะ',
-  /** Placeholder — add the real handle when the account is live. */
-  instagramUrl: '',
+  instagram: '@kojikane_eyewear',
+  instagramUrl: 'https://www.instagram.com/kojikane_eyewear',
+  tiktok: '@.kojikane',
+  tiktokUrl: 'https://www.tiktok.com/@.kojikane',
   email: '',
 } as const;
 
@@ -119,5 +121,6 @@ export const legalNav: NavLink[] = [
 export const socialLinks = [
   { label: 'Facebook', href: contact.facebookUrl, handle: contact.facebookName },
   { label: 'LINE', href: contact.lineUrl, handle: contact.line },
-  { label: 'Instagram', href: contact.instagramUrl, handle: '' },
+  { label: 'Instagram', href: contact.instagramUrl, handle: contact.instagram },
+  { label: 'TikTok', href: contact.tiktokUrl, handle: contact.tiktok },
 ] as const;

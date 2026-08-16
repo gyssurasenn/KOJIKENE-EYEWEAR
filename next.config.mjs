@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   // Hides the floating "N" dev-tools badge Next.js overlays in dev mode.
-  devIndicators: true,
+  devIndicators: false,
   images: {
     // Real photography will be dropped into /public/images later.
     // AVIF/WebP are generated automatically by next/image at request time.

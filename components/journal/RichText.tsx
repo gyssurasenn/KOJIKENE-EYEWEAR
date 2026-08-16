@@ -7,6 +7,13 @@ import type { ArticleBlock } from '@/types';
 
 const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
 
+type HeadingEntry = {
+  index: number;
+  id: string;
+  text: string;
+  level: 2 | 3;
+};
+
 /**
  * Renders inline links written as [label](/path) in the article body.
  * Internal paths are unprefixed in the source and get the locale added
@@ -57,21 +64,43 @@ function inline(text: string, locale: Locale): ReactNode {
 }
 
 /** H2 headings, for the in-page contents list. */
+function getHeadingEntries(body: ArticleBlock[]): HeadingEntry[] {
+  const used = new Map<string, number>();
+
+  return body.flatMap((block, index) => {
+    if (block.type !== 'heading') return [];
+
+    const baseId = slugify(block.text) || `section-${index + 1}`;
+    const count = used.get(baseId) ?? 0;
+    used.set(baseId, count + 1);
+
+    return [
+      {
+        index,
+        id: count === 0 ? baseId : `${baseId}-${count + 1}`,
+        text: block.text,
+        level: block.level ?? 2,
+      },
+    ];
+  });
+}
+
 export function extractHeadings(body: ArticleBlock[]) {
-  return body
-    .filter((block): block is Extract<ArticleBlock, { type: 'heading' }> => block.type === 'heading')
-    .filter((block) => (block.level ?? 2) === 2)
-    .map((block) => ({ id: slugify(block.text), text: block.text }));
+  return getHeadingEntries(body)
+    .filter((heading) => heading.level === 2)
+    .map(({ id, text }) => ({ id, text }));
 }
 
 export function RichText({ blocks, locale }: { blocks: ArticleBlock[]; locale: Locale }) {
+  const headingIds = new Map(getHeadingEntries(blocks).map((heading) => [heading.index, heading.id]));
+
   return (
     <div className="max-w-prose2">
       {blocks.map((block, index) => {
         switch (block.type) {
           case 'heading': {
             const level = block.level ?? 2;
-            const id = slugify(block.text);
+            const id = headingIds.get(index);
             return level === 2 ? (
               <h2
                 key={index}

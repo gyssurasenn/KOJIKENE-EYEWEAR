@@ -55,6 +55,7 @@
       "phone": "Phone",
       "line": "LINE",
       "facebook": "Facebook",
+      "social": "Online",
       "hours": "Opening hours",
       "hoursShort": "Hours",
       "breadcrumb": "Breadcrumb",
@@ -116,6 +117,7 @@
 
   "contactCta": {
     "eyebrow": "Visit the shop",
+    "quickContact": "Quick contact",
     "default": {
       "title": "Come and try them on.",
       "body": "A frame is very hard to judge from a photograph — including ours. Walk in, take your time, and let us fit them properly."
