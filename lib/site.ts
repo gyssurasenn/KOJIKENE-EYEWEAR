@@ -29,7 +29,7 @@ export const contact = {
   line: 'Fisho.naka199',
   lineUrl: 'https://line.me/ti/p/~Fisho.naka199',
   facebookName: 'แว่นตา โคจิ คานะ : KojiKane',
-  facebookUrl: 'https://www.facebook.com/search/top?q=แว่นตา โคจิ คานะ',
+  facebookUrl: 'https://www.facebook.com/fisho.naka199',
   instagram: '@kojikane_eyewear',
   instagramUrl: 'https://www.instagram.com/kojikane_eyewear',
   tiktok: '@.kojikane',

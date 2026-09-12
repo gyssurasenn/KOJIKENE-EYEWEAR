@@ -105,8 +105,8 @@ export async function generateMetadata({
       googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
     },
     icons: {
-      icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-      apple: [{ url: '/favicon.svg' }],
+      icon: [{ url: '/images/LOGO/KOJIKANE_Logo.png', type: 'image/png' }],
+      apple: [{ url: '/images/LOGO/KOJIKANE_Logo.png' }],
     },
     // Add the Google Search Console token here once the property is created:
     // verification: { google: 'xxxxxxxx' },
