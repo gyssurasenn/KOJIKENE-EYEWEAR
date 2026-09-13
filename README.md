@@ -1,12 +1,13 @@
 # KOJIKANE EYEWEAR
 
-Editorial website for a family-owned optical shop in Nonthaburi, Thailand.
+Editorial website for an optical shop in Nonthaburi, Thailand.
 Fashion eyewear, prescription glasses, and the Journal.
 
 **Bilingual: Thai (default) and English.** Both languages are fully translated,
 statically generated, and separately indexable.
 
-**This is not an e-commerce site.** There is no cart, no checkout, no prices.
+**This is not an e-commerce site.** There is no cart or checkout. The homepage
+supports product information and optional prices, with clearly marked demo data.
 Every page is built to move a reader towards visiting the shop.
 
 ---
@@ -29,8 +30,8 @@ Then open http://localhost:3000.
 | `npm run placeholders` | Regenerate the temporary placeholder imagery |
 
 Stack: Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS.
-Server Components throughout; the only Client Components are the header
-(`components/layout/Header.tsx`) and the scroll reveal (`components/ui/Reveal.tsx`).
+Server Components provide page content. Client Components handle navigation,
+scroll reveals, Swiper carousels and independent product image galleries.
 
 ---
 
@@ -72,7 +73,7 @@ the `<head>` and the sitemap.
 | --- | --- |
 | `i18n/config.ts` | Locale list, default, and the `localePath()` / `stripLocale()` helpers |
 | `i18n/server.ts` | `getT(locale)` for Server Components — no client JS |
-| `i18n/client.tsx` | `I18nProvider` + `useT()` for the header, using `react-i18next` and `LanguageDetector` |
+| `i18n/client.tsx` | `I18nProvider` + `useT()` with a separate i18next instance per provider |
 | `middleware.ts` | Rewrites `/eyewear` → `/th/eyewear`, redirects `/th/*` → `/*` |
 | `components/layout/LanguageSwitcher.tsx` | TH / EN toggle — real links, works without JS |
 
@@ -85,8 +86,8 @@ dictionary is handed to the browser, for the header.
 cookie that middleware honours on the next visit. `Accept-Language` and
 `navigator.language` are deliberately **not** used to redirect — doing so would
 bounce crawlers between languages and pull visitors off the Thai URLs, which are
-the ones that should rank locally. (`LanguageDetector` is configured with
-`caches: []` for exactly this reason.)
+the ones that should rank locally. The client provider uses the URL locale
+directly, so server-rendered requests cannot leak languages across visitors.
 
 ### Adding or changing copy
 
@@ -226,9 +227,9 @@ scripts/                 placeholder generator (delete after the real photos lan
 ## Design notes
 
 Warm neutral palette only — off-white, bone, sand, clay, charcoal, ink — defined
-in `tailwind.config.ts`. Type does the work: Zen Kaku Gothic New for display and
+in `tailwind.config.ts`. Type does the work: Outfit for display and
 Inter for body on the English site; Noto Sans Thai carries both roles on the Thai
-site, since the latin display face has no Thai glyphs.
+site. Pattaya remains available as a sparingly used accent.
 
 Thai typography is tuned separately in `app/globals.css`: more leading, and no
 negative tracking — tight letter-spacing collides with the vowel and tone marks

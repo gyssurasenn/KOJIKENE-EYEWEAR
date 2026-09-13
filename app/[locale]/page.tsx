@@ -6,7 +6,7 @@ import { FamilyStory } from '@/components/home/FamilyStory';
 import { FeaturedEyewear } from '@/components/home/FeaturedEyewear';
 import { ServicesSection } from '@/components/home/ServicesSection';
 import { JournalSection } from '@/components/home/JournalSection';
-import { VisitStore } from '@/components/sections/VisitStore';
+import { StoreGallery } from '@/components/sections/StoreGallery';
 import { getT, tList } from '@/i18n/server';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { buildMetadata } from '@/lib/seo';
@@ -39,12 +39,8 @@ export default async function HomePage({ params }: PageProps) {
       <FamilyStory locale={locale} />
       <FeaturedEyewear locale={locale} />
       <ServicesSection locale={locale} />
+      <StoreGallery locale={locale} />
       <JournalSection locale={locale} />
-      <section className="border-t border-ink/10 bg-bone">
-        <div className="shell py-section">
-          <VisitStore locale={locale} />
-        </div>
-      </section>
     </>
   );
 }

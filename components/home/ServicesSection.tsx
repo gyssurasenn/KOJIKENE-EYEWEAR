@@ -3,6 +3,7 @@ import { ServiceCard } from '@/components/cards/ServiceCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { TextLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
+import { ImageReveal } from '@/components/ui/ImageReveal';
 import { getT } from '@/i18n/server';
 import { getServices } from '@/lib/content';
 import type { Locale } from '@/i18n/config';
@@ -35,7 +36,7 @@ export async function ServicesSection({ locale }: { locale: Locale }) {
           ))}
         </div>
 
-        <Reveal className="mt-20">
+        <ImageReveal className="mt-20">
           <figure className="relative aspect-[16/9] w-full overflow-hidden bg-sand md:aspect-[21/9]">
             <Image
               src={images.fitting.src}
@@ -48,7 +49,7 @@ export async function ServicesSection({ locale }: { locale: Locale }) {
           <figcaption className="mt-4 text-[0.8125rem] text-stone">
             {t('home.services.caption')}
           </figcaption>
-        </Reveal>
+        </ImageReveal>
       </div>
     </section>
   );

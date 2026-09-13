@@ -1,3 +1,5 @@
+@import './editorial.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,7 +22,7 @@
   }
 
   body {
-    @apply bg-paper text-ink font-sans antialiased;
+    @apply bg-white text-ink font-sans antialiased;
     /* No horizontal scroll on mobile, ever. */
     overflow-x: hidden;
     font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
@@ -42,7 +44,7 @@
 
   /*
    * Thai typography.
-   * The latin display face has no Thai glyphs, so Thai carries the whole
+   * The latin display face is tuned for English, so Thai carries the whole
    * site on Noto Sans Thai. Thai also needs more leading than latin and
    * must not be tracked tightly — negative letter-spacing breaks the
    * vowel and tone marks that sit above and below the baseline.
@@ -75,6 +77,26 @@
 }
 
 @layer components {
+  .wallpaper-section {
+    position: relative;
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+      url('/images/BgHome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .wallpaper2-section {
+    position: relative;
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+      url('/images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
   .shell {
     @apply mx-auto w-full max-w-shell px-[var(--shell-gutter)];
   }
@@ -102,9 +124,8 @@
 
   /* Slow image reveal on hover, used on editorial cards. */
   .media-zoom img {
-    @apply transition-transform duration-[1200ms] ease-editorial will-change-transform;
+    transition: transform var(--motion-slow) var(--motion-ease);
   }
-  .group:hover .media-zoom img,
   .group:focus-within .media-zoom img {
     @apply scale-[1.035];
   }
@@ -132,15 +153,25 @@
 @media (prefers-reduced-motion: no-preference) {
   [data-reveal='pending'] {
     opacity: 0;
-    transform: translate3d(0, 16px, 0);
+    transform: translate3d(0, 24px, 0);
   }
   [data-reveal='shown'] {
     opacity: 1;
     transform: none;
     transition:
-      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity var(--motion-base) var(--motion-ease),
+      transform var(--motion-base) var(--motion-ease),
+      clip-path var(--motion-slow) var(--motion-ease);
   }
+  [data-reveal-kind='image'][data-reveal='pending'] {
+    transform: none;
+    clip-path: inset(0 0 12% 0);
+  }
+  [data-reveal-kind='image'][data-reveal='shown'] { clip-path: inset(-3rem); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .media-zoom img { transform: scale(1.035); }
 }
 
 @media (prefers-reduced-motion: reduce) {

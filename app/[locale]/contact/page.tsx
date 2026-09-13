@@ -103,7 +103,7 @@ export default async function ContactPage({ params }: PageProps) {
                 href={contact.lineUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[3.25rem] items-center justify-center bg-ink px-8 text-[0.6875rem] font-medium uppercase tracking-widest2 text-paper transition-colors duration-500 ease-editorial hover:bg-graphite"
+                className="inline-flex min-h-[3.25rem] items-center justify-center bg-brand px-8 text-[0.6875rem] font-medium uppercase tracking-widest2 text-ink transition-colors duration-500 ease-editorial hover:bg-brand-hover"
               >
                 LINE · {contact.line}
               </a>

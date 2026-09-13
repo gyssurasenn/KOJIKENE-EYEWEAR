@@ -8,7 +8,7 @@
 
 ## 1. โปรเจกต์นี้คืออะไร
 
-KOJIKANE EYEWEAR คือเว็บไซต์ editorial / brand website สำหรับร้านแว่นตาครอบครัวในจังหวัดนนทบุรี
+KOJIKANE EYEWEAR คือเว็บไซต์ editorial / brand website สำหรับร้านแว่นตาในจังหวัดนนทบุรี
 
 เป้าหมายของเว็บ:
 
@@ -21,7 +21,7 @@ KOJIKANE EYEWEAR คือเว็บไซต์ editorial / brand website ส
 
 - ไม่มีตะกร้าสินค้า
 - ไม่มี checkout
-- ไม่มีระบบราคา
+- แสดงรุ่น ราคา และสีสินค้าได้ตามข้อมูลที่ยืนยันแล้ว แต่ไม่มีระบบสั่งซื้อหรือชำระเงิน
 - ไม่มีการสั่งซื้อผ่านหน้าเว็บ
 
 ทุกหน้าออกแบบมาเพื่อให้คนอยากเดินทางมาที่ร้านจริง
@@ -199,7 +199,7 @@ Client Component จะมีบรรทัดนี้ด้านบนไฟ
 - Featured Eyewear — แนะนำหมวดแว่น
 - Services — บริการของร้าน
 - Why Kojikane — เหตุผลที่ควรเลือกร้าน
-- Family Story — mood ของร้านครอบครัว
+- In-store Experience — บรรยากาศการเลือกแว่น ลองจริง และฟิตกรอบที่ร้าน
 - Journal — บทความ
 - Visit Store / Contact CTA — พาไปติดต่อหรือมาที่ร้าน
 
@@ -261,12 +261,12 @@ Client Component จะมีบรรทัดนี้ด้านบนไฟ
 
 ### 7.6 หน้าเกี่ยวกับเรา — `app/[locale]/about/page.tsx`
 
-หน้าที่: เล่า story ของร้านและความเป็นร้านครอบครัว
+หน้าที่: เล่าประสบการณ์หน้าร้านและเหตุผลที่ลูกค้าควรมาลองแว่นจริง
 
 ควรเน้น:
 
-- ความอบอุ่น
-- ความจริงใจ
+- การลองแว่นกับใบหน้าจริง
+- การฟิตกรอบและคำแนะนำแบบต่อหน้า
 - การเลือกแว่นแบบไม่รีบ
 - local shop บนถนนสามัคคี นนทบุรี
 
@@ -473,3 +473,31 @@ SEO สำคัญมาก เพราะเว็บนี้ต้องใ
 | 2026-08-13 | เวลาเปิดร้านควรยืนยันก่อน launch จริง | รอยืนยัน |
 | 2026-08-13 | รูป placeholder ควรถูกแทนด้วยรูปถ่ายร้านจริง | รอดำเนินการ |
 
+## 16. Editorial Motion และ Product Carousel (2026-09-12)
+
+- หน้าแรกใช้ Hero 3 สไลด์, Product Carousel, Store Gallery และ Journal Carousel
+- `components/ui/EditorialSwiper.tsx` ควบคุม carousel ชั้นนอกและปุ่มกลางที่ใช้ร่วมกัน
+- `components/eyewear/ProductCard.tsx` มี Swiper และ state รูป/สีเป็นของแต่ละการ์ด
+- ข้อมูลสินค้าอยู่ใน `content/products.ts`; รูปอ้างอิงผ่าน `lib/images.ts`
+- ข้อมูลปัจจุบันเป็นตัวอย่าง (`isDemo: true`) ไม่ใช่สินค้าหรือราคาขายจริง
+- `freeShipping` เป็นค่าของสินค้าที่ต้องยืนยัน ไม่ใช่นโยบายจัดส่งของทั้งร้าน
+- Motion token และ layout carousel อยู่ใน `app/editorial.css`
+- `Reveal` / `ImageReveal` ใช้ CSS + IntersectionObserver และรองรับ reduced motion
+- `MobileContactBar` ใช้ข้อมูลจาก `lib/site.ts` และซ่อนขณะเปิดเมนู
+- Fashion/Prescription ใช้ FrameCarousel และ FrameDetailCarousel; About ใช้ StoreGallery
+- อ่าน `PRODUCT_GUIDE.md` เมื่อต้องเพิ่มรูป รุ่น ราคา หรือสี
+- `i18n/client.tsx` แยก instance ต่อ provider เพื่อไม่ให้ภาษารั่วข้ามคำขอ SSR
+
+## 17. แผนที่ใน Footer (2026-09-13)
+
+- หน้าแรกตัด section VisitStore ที่ซ้ำกับ Footer ออกแล้ว
+- Footer รวมข้อมูลติดต่อ ปุ่มดูเส้นทาง และแผนที่ขนาดกะทัดรัด
+- `components/layout/FooterGrid.tsx` ตรวจ route segment เพื่อซ่อนแผนที่ใน Footer เฉพาะหน้า Contact ทั้งสองภาษา
+- หน้า Contact ยังคงใช้ VisitStore และแผนที่ใหญ่ตามเดิม
+- iframe ใช้ component กลาง `components/ui/StoreMap.tsx`; URL ยังมาจาก `lib/site.ts`
+# Brand theme (2026-09-13)
+
+- Primary actions use orange `brand` (#FF8A4C) with dark text; hover uses #F57835.
+- Neutral section/footer surface `bone` is #F4F4F3. Secondary controls remain neutral.
+- Header/Footer use the original PNG through `lib/images.ts`; `.brand-logo` CSS frames its whitespace without editing the original file.
+- Dark orange `--brand-accent` remains for small interactive indicators and gallery controls.

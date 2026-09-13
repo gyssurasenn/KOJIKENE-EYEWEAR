@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageHeader } from '@/components/layout/PageHeader';
-import { EyewearEditorial } from '@/components/eyewear/EyewearEditorial';
+import { FrameCarousel } from '@/components/eyewear/FrameCarousel';
+import { FrameDetailCarousel } from '@/components/eyewear/FrameDetailCarousel';
+import { ImageReveal } from '@/components/ui/ImageReveal';
 import { ServiceCard } from '@/components/cards/ServiceCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
@@ -66,6 +68,7 @@ export default async function PrescriptionEyewearPage({ params }: PageProps) {
       <JsonLd data={breadcrumbSchema(locale, breadcrumbs)} />
 
       <PageHeader
+        editorial
         locale={locale}
         breadcrumbs={breadcrumbs}
         eyebrow={t('eyewear.categories.prescription.title')}
@@ -74,7 +77,7 @@ export default async function PrescriptionEyewearPage({ params }: PageProps) {
         meta={getMeta(t, 'eyewear.prescriptionPage.meta')}
       />
 
-      <Reveal>
+      <ImageReveal>
         <figure className="relative aspect-[4/5] w-full overflow-hidden bg-sand sm:aspect-[16/9] lg:aspect-[21/9]">
           <Image
             src={images.prescriptionEyewear.src}
@@ -85,7 +88,7 @@ export default async function PrescriptionEyewearPage({ params }: PageProps) {
             className="object-cover"
           />
         </figure>
-      </Reveal>
+      </ImageReveal>
 
       <section className="shell py-section">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -138,7 +141,7 @@ export default async function PrescriptionEyewearPage({ params }: PageProps) {
             }
             className="mb-16"
           />
-          <EyewearEditorial frames={frames} locale={locale} />
+          <FrameCarousel frames={frames} locale={locale} label={t('eyewear.prescriptionPage.inStoreTitle')} />
         </div>
       </section>
 
@@ -186,6 +189,7 @@ export default async function PrescriptionEyewearPage({ params }: PageProps) {
         </div>
       </section>
 
+      <FrameDetailCarousel locale={locale} category="prescription" />
       <ContactCTA locale={locale} variant="prescription" />
     </>
   );

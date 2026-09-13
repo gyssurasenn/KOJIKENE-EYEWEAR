@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { MobileContactBar } from '@/components/layout/MobileContactBar';
 import { LogoLink } from '@/components/brand/Logo';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 import { useT } from '@/i18n/client';
@@ -21,6 +22,7 @@ export function Header({ locale }: { locale: Locale }) {
   const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggle = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -39,13 +41,30 @@ export function Header({ locale }: { locale: Locale }) {
     if (!menuOpen) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    const panel = document.getElementById('mobile-menu');
+    const background = Array.from(document.querySelectorAll<HTMLElement>('main, body > footer, main ~ footer'));
+    const previousInert = background.map(node => node.inert);
+    background.forEach(node => { node.inert = true; });
+    const focusFrame = requestAnimationFrame(() => panel?.querySelector<HTMLElement>('a[href]')?.focus());
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setMenuOpen(false);
+      if (event.key === 'Tab') {
+        const targets = [menuToggle.current, ...Array.from(panel?.querySelectorAll<HTMLElement>('a[href], button') ?? [])].filter((node): node is HTMLElement => Boolean(node));
+        const index = targets.indexOf(document.activeElement as HTMLElement);
+        if (event.shiftKey && index <= 0) { event.preventDefault(); targets.at(-1)?.focus(); }
+        else if (!event.shiftKey && (index === targets.length - 1 || index < 0)) { event.preventDefault(); targets[0]?.focus(); }
+      }
     };
+    const onResize = () => { if (window.innerWidth >= 1024) setMenuOpen(false); };
     window.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
     return () => {
+      cancelAnimationFrame(focusFrame);
+      background.forEach((node, index) => { node.inert = previousInert[index]; });
+      if (panel?.contains(document.activeElement)) menuToggle.current?.focus();
       document.body.style.overflow = previous;
       window.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
     };
   }, [menuOpen]);
 
@@ -59,7 +78,7 @@ export function Header({ locale }: { locale: Locale }) {
       </a>
 
       {/* Utility bar — local trust signals, hidden on small screens. */}
-      <div className="hidden border-b border-ink/10 bg-paper md:block">
+      <div className="hidden border-b border-ink/10 bg-white md:block">
         <div className="shell flex h-9 items-center justify-between text-[0.6875rem] uppercase tracking-widest2 text-stone">
           <p>{t('common.header.tagline')}</p>
           <div className="flex items-center gap-6">
@@ -80,10 +99,10 @@ export function Header({ locale }: { locale: Locale }) {
       </div>
 
       <header
-        className={`sticky top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500 ease-editorial ${
+        className={`sticky top-0 z-50 bg-white transition-[border-color] duration-500 ease-editorial ${
           scrolled || menuOpen
-            ? 'border-b border-ink/10 bg-paper/85 backdrop-blur-md supports-[backdrop-filter]:bg-paper/70'
-            : 'border-b border-transparent bg-paper'
+            ? 'border-b border-ink/10'
+            : 'border-b border-transparent'
         }`}
       >
         <div className="shell flex h-[var(--header-height)] items-center justify-between gap-6">
@@ -100,7 +119,7 @@ export function Header({ locale }: { locale: Locale }) {
           <div className="flex items-center gap-3">
             <Link
               href={localePath(locale, '/contact')}
-              className="hidden min-h-[2.5rem] items-center bg-ink px-5 text-[0.6875rem] font-medium uppercase tracking-widest2 text-paper transition-colors duration-500 ease-editorial hover:bg-graphite lg:inline-flex"
+              className="hidden min-h-[2.5rem] items-center bg-brand px-5 text-[0.6875rem] font-medium uppercase tracking-widest2 text-ink transition-colors duration-500 ease-editorial hover:bg-brand-hover lg:inline-flex"
             >
               {t('common.cta.visitStore')}
             </Link>
@@ -108,6 +127,7 @@ export function Header({ locale }: { locale: Locale }) {
             <LanguageSwitcher current={locale} label={t('common.language.label')} className="md:hidden" />
 
             <button
+              ref={menuToggle}
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
@@ -140,6 +160,7 @@ export function Header({ locale }: { locale: Locale }) {
         locale={locale}
         onClose={() => setMenuOpen(false)}
       />
+      <MobileContactBar menuOpen={menuOpen} />
     </>
   );
 }
@@ -184,7 +205,7 @@ function DesktopNavItem({
         {t(`common.nav.${item.key}`)}
       </Link>
       <div className="invisible absolute left-1/2 top-full z-10 -translate-x-1/2 pt-5 opacity-0 transition-[opacity,visibility] duration-300 ease-editorial group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-        <ul className="min-w-[15rem] border border-ink/10 bg-paper p-2 shadow-[0_18px_50px_-30px_rgba(22,20,15,0.5)]">
+        <ul className="min-w-[15rem] border border-ink/10 bg-white p-2 shadow-[0_18px_50px_-30px_rgba(22,20,15,0.5)]">
           {item.children.map((child) => (
             <li key={child.href}>
               <Link
@@ -221,7 +242,7 @@ function MobileMenu({
     <div
       id="mobile-menu"
       hidden={!open}
-      className={`fixed inset-x-0 bottom-0 top-[var(--header-height)] z-40 flex-col overflow-y-auto bg-paper lg:hidden ${
+      className={`fixed inset-x-0 bottom-0 top-[var(--header-height)] z-40 flex-col overflow-y-auto bg-white lg:hidden ${
         open ? 'flex' : 'hidden'
       }`}
     >
@@ -264,7 +285,7 @@ function MobileMenu({
           <Link
             href={localePath(locale, '/contact')}
             onClick={onClose}
-            className="flex min-h-[3.25rem] w-full items-center justify-center bg-ink px-8 text-[0.6875rem] font-medium uppercase tracking-widest2 text-paper"
+            className="flex min-h-[3.25rem] w-full items-center justify-center bg-brand px-8 text-[0.6875rem] font-medium uppercase tracking-widest2 text-ink hover:bg-brand-hover"
           >
             {t('common.cta.visitStore')}
           </Link>

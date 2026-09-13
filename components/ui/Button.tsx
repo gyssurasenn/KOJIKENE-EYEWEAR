@@ -25,7 +25,7 @@ const base =
   'group/btn inline-flex items-center justify-center gap-2.5 font-medium uppercase tracking-widest2 text-[0.6875rem] transition-colors duration-500 ease-editorial focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper';
 
 const variants: Record<Variant, string> = {
-  solid: 'bg-ink text-paper hover:bg-graphite',
+  solid: 'bg-brand text-ink hover:bg-brand-hover',
   outline: 'border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-paper',
   ghost: 'text-ink hover:text-stone',
 };

@@ -14,6 +14,7 @@ type PageHeaderProps = {
   /** Small meta pairs shown along the bottom edge. */
   meta?: MetaPair[];
   children?: ReactNode;
+  editorial?: boolean;
 };
 
 /** Shared masthead for interior pages. Renders the single <h1>. */
@@ -25,11 +26,12 @@ export async function PageHeader({
   breadcrumbs,
   meta,
   children,
+  editorial = false,
 }: PageHeaderProps) {
   const t = await getT(locale);
 
   return (
-    <header className="border-b border-ink/10 bg-paper">
+    <header className={`border-b border-ink/10 bg-white ${editorial ? 'editorial-masthead' : ''}`}>
       <div className="shell pb-16 pt-8 md:pb-20 md:pt-10">
         <Breadcrumb
           items={breadcrumbs}

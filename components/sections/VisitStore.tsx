@@ -1,6 +1,7 @@
 import type { TFunction } from 'i18next';
 import { ButtonLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
+import { StoreMap } from '@/components/ui/StoreMap';
 import { getT } from '@/i18n/server';
 import type { Locale } from '@/i18n/config';
 import { address, contact, openingHours, socialLinks } from '@/lib/site';
@@ -277,11 +278,8 @@ function ContactMapBlock({
 function ContactMapPanel({ t }: { t: TFunction }) {
   return (
     <div className="relative flex-1 overflow-hidden rounded-2xl shadow-sm ring-1 ring-ink/5">
-      <iframe
-        src={address.mapsEmbedUrl}
+      <StoreMap
         title={t('visit.mapTitle')}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
         className="h-full min-h-[380px] w-full border-0"
       />
       <a
@@ -306,11 +304,8 @@ function MapPanel({ t }: { t: TFunction }) {
   if (address.mapsEmbedUrl) {
     return (
       <div className="h-full min-h-[28rem] w-full overflow-hidden border border-ink/10 bg-sand lg:min-h-full">
-        <iframe
-          src={address.mapsEmbedUrl}
+        <StoreMap
           title={t('visit.mapTitle')}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
           className="h-full w-full border-0"
         />
       </div>

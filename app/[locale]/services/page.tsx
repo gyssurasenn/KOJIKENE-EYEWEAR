@@ -4,6 +4,7 @@ import { PageHeader } from '@/components/layout/PageHeader';
 import { ServiceCard } from '@/components/cards/ServiceCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
+import { ImageReveal } from '@/components/ui/ImageReveal';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getT, tList } from '@/i18n/server';
@@ -54,6 +55,7 @@ export default async function ServicesPage({ params }: PageProps) {
       />
 
       <PageHeader
+        editorial
         locale={locale}
         breadcrumbs={breadcrumbs}
         eyebrow={t('services.page.eyebrow')}
@@ -75,7 +77,7 @@ export default async function ServicesPage({ params }: PageProps) {
       <section className="border-y border-ink/10 bg-bone">
         <div className="shell py-section">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <Reveal>
+            <ImageReveal>
               <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
                 <Image
                   src={images.lensConsultation.src}
@@ -85,7 +87,7 @@ export default async function ServicesPage({ params }: PageProps) {
                   className="object-cover"
                 />
               </figure>
-            </Reveal>
+            </ImageReveal>
             <Reveal delay={80}>
               <p className="eyebrow mb-5 flex items-center gap-3">
                 <span aria-hidden="true" className="h-px w-8 bg-ink/25" />

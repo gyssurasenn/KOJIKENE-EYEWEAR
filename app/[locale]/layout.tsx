@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Noto_Sans_Thai, Zen_Kaku_Gothic_New } from 'next/font/google';
+import { Inter, Noto_Sans_Thai, Outfit, Pattaya } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 
@@ -27,12 +27,20 @@ const inter = Inter({
   variable: '--font-sans',
 });
 
-/** Editorial display face — a Japanese-designed gothic, used large and light. */
-const display = Zen_Kaku_Gothic_New({
+/** Editorial display face — clean and modern, used for headings and brand moments. */
+const display = Outfit({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-display',
+});
+
+/** Accent face for small Thai brand flourishes. Use sparingly. */
+const accent = Pattaya({
+  subsets: ['thai', 'latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-accent',
 });
 
 /**
@@ -144,7 +152,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={localeConfig[locale].htmlLang}
-      className={`${inter.variable} ${display.variable} ${thai.variable}`}
+      className={`${inter.variable} ${display.variable} ${thai.variable} ${accent.variable}`}
       suppressHydrationWarning
     >
       <body className="flex min-h-screen flex-col" data-locale={locale}>

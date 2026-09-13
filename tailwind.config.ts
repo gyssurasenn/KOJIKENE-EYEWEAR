@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 
 /**
  * KOJIKANE EYEWEAR — design tokens.
- * Warm neutral palette only. No bright hues, no gradients as decoration.
+ * White and charcoal surfaces with orange brand accents.
  */
 const config: Config = {
   content: [
@@ -15,9 +15,11 @@ const config: Config = {
     extend: {
       colors: {
         // Surfaces
-        paper: '#F6F4F0', // off-white, warm
+        paper: '#FAF9F6', // Soft paper white.
+        white: '#FFFFFF', // Pure white.
         canvas: '#FFFFFF',
-        bone: '#EFEBE4', // warm white / section break
+        bone: '#F4F4F3', // neutral section break
+        brand: { DEFAULT: '#FF8A4C', hover: '#F57835' },
         sand: '#E2DACE', // muted beige
         clay: '#C8BCAA', // warm sand accent
         // Ink
@@ -33,6 +35,7 @@ const config: Config = {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         display: ['var(--font-display)', 'var(--font-sans)', 'ui-sans-serif', 'sans-serif'],
         thai: ['var(--font-thai)', 'var(--font-sans)', 'sans-serif'],
+        accent: ['var(--font-accent)', 'var(--font-thai)', 'var(--font-sans)', 'sans-serif'],
       },
       fontSize: {
         // Editorial display scale (clamped, mobile-first)

@@ -1,16 +1,16 @@
-import { EyewearEditorial } from '@/components/eyewear/EyewearEditorial';
+import { ProductCarousel } from '@/components/eyewear/ProductCarousel';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { TextLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { getT } from '@/i18n/server';
 import type { Locale } from '@/i18n/config';
-import { featuredFrames, frameStyles } from '@/content/eyewear';
+import { frameStyles } from '@/content/eyewear';
 
 export async function FeaturedEyewear({ locale }: { locale: Locale }) {
   const t = await getT(locale);
 
   return (
-    <section className="border-t border-ink/10 bg-paper">
+    <section id="curated-eyewear" className="border-t border-ink/10 bg-white">
       <div className="shell py-section">
         <SectionHeading
           eyebrow={t('home.featured.eyebrow')}
@@ -35,7 +35,7 @@ export async function FeaturedEyewear({ locale }: { locale: Locale }) {
           ))}
         </Reveal>
 
-        <EyewearEditorial frames={featuredFrames} locale={locale} />
+        <ProductCarousel locale={locale} />
 
         <Reveal className="mt-20 border-t border-ink/10 pt-8">
           <p className="max-w-2xl text-sm leading-relaxed text-stone">{t('home.featured.note')}</p>

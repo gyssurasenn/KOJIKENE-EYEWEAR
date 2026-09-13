@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
+import { ImageReveal } from '@/components/ui/ImageReveal';
+import { StoreGallery } from '@/components/sections/StoreGallery';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getT, tList } from '@/i18n/server';
@@ -44,6 +46,7 @@ export default async function AboutPage({ params }: PageProps) {
       <JsonLd data={breadcrumbSchema(locale, breadcrumbs)} />
 
       <PageHeader
+        editorial
         locale={locale}
         breadcrumbs={breadcrumbs}
         eyebrow={t('home.family.eyebrow')}
@@ -52,7 +55,7 @@ export default async function AboutPage({ params }: PageProps) {
         meta={getMeta(t, 'home.storyPoints')}
       />
 
-      <Reveal>
+      <ImageReveal>
         <figure className="relative aspect-[4/5] w-full overflow-hidden bg-sand sm:aspect-[16/9] lg:aspect-[21/9]">
           <Image
             src={images.family.src}
@@ -64,7 +67,7 @@ export default async function AboutPage({ params }: PageProps) {
           />
           <figcaption className="sr-only">{t('about.figcaptionFamily')}</figcaption>
         </figure>
-      </Reveal>
+      </ImageReveal>
 
       <section className="shell py-section">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -95,7 +98,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="border-y border-ink/10 bg-bone">
+      <section className="border-y border-ink/10 bg-white">
         <div className="shell py-section">
           <SectionHeading
             eyebrow={t('home.philosophy.eyebrow')}
@@ -119,36 +122,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="shell py-section">
-        <div className="grid gap-10 md:grid-cols-2">
-          <Reveal>
-            <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
-              <Image
-                src={images.storeExterior.src}
-                alt={images.storeExterior.alt}
-                fill
-                sizes="(min-width: 768px) 45vw, 100vw"
-                className="object-cover"
-              />
-              <figcaption className="sr-only">{t('about.figcaptionExterior')}</figcaption>
-            </figure>
-            <p className="mt-4 text-[0.8125rem] text-stone">{t('about.captionExterior')}</p>
-          </Reveal>
-          <Reveal delay={80}>
-            <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
-              <Image
-                src={images.storeInterior.src}
-                alt={images.storeInterior.alt}
-                fill
-                sizes="(min-width: 768px) 45vw, 100vw"
-                className="object-cover"
-              />
-              <figcaption className="sr-only">{t('about.figcaptionInterior')}</figcaption>
-            </figure>
-            <p className="mt-4 text-[0.8125rem] text-stone">{t('about.captionInterior')}</p>
-          </Reveal>
-        </div>
-      </section>
+      <StoreGallery locale={locale} context="about" />
 
       <ContactCTA locale={locale} variant="about" />
     </>

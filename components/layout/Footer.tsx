@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { Wordmark } from '@/components/brand/Logo';
 import { SocialLinks } from '@/components/ui/SocialLinks';
+import { StoreMap } from '@/components/ui/StoreMap';
+import { ButtonLink } from '@/components/ui/Button';
+import { FooterGrid } from '@/components/layout/FooterGrid';
 import { getT } from '@/i18n/server';
 import { localePath, type Locale } from '@/i18n/config';
 import { address, contact, legalNav, mainNav, openingHours, site } from '@/lib/site';
@@ -11,12 +14,12 @@ export async function Footer({ locale }: { locale: Locale }) {
   const addressLines = locale === 'th' ? address.lines : address.linesEn;
 
   return (
-    <footer className="border-t border-ink/10 bg-bone">
+    <footer id="footer" className="border-t border-ink/10 bg-bone">
       <div className="shell py-16 md:py-20">
-        <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <FooterGrid map={<StoreMap title={t('visit.mapTitle')} className="h-[300px] w-full border-0 bg-white md:h-[320px]" />}>
           {/* Brand */}
-          <div className="lg:col-span-4">
-            <Wordmark className="text-lg" descriptor={t('common.brand.descriptor')} />
+          <div className="min-w-0">
+            <Wordmark className="footer-wordmark text-lg" descriptor={t('common.brand.descriptor')} />
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-graphite">
               {t('common.footer.blurb')}
             </p>
@@ -24,7 +27,7 @@ export async function Footer({ locale }: { locale: Locale }) {
           </div>
 
           {/* Visit */}
-          <div className="lg:col-span-4">
+          <div className="min-w-0">
             <h2 className="eyebrow mb-6">{t('common.footer.visitShop')}</h2>
             <address className="not-italic">
               <p
@@ -76,24 +79,25 @@ export async function Footer({ locale }: { locale: Locale }) {
                         {t(`common.hours.${entry.labelKey}`)} · {entry.hours}
                       </span>
                     ))}
+                    {openingHours.isPlaceholder && <p className="mt-2 text-xs leading-relaxed">{t('common.hours.note')}</p>}
                   </dd>
                 </div>
               </dl>
             </address>
-            <a
+            <ButtonLink
               href={address.mapsDirectionsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline mt-6 inline-block text-[0.6875rem] font-medium uppercase tracking-widest2 text-ink"
+              external
+              className="mt-6"
             >
               {t('common.cta.getDirections')}
-            </a>
+            </ButtonLink>
           </div>
+        </FooterGrid>
 
           {/* Navigation */}
-          <nav aria-label={t('common.footer.nav')} className="lg:col-span-4">
+          <nav aria-label={t('common.footer.nav')} className="mt-10 border-t border-ink/10 pt-8">
             <h2 className="eyebrow mb-6">{t('common.footer.explore')}</h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 text-sm">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-6 text-sm sm:grid-cols-3 lg:grid-cols-5">
               {mainNav.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -120,9 +124,8 @@ export async function Footer({ locale }: { locale: Locale }) {
               ))}
             </ul>
           </nav>
-        </div>
 
-        <div className="mt-16 flex flex-col gap-5 border-t border-ink/10 pt-8 text-[0.6875rem] uppercase tracking-widest2 text-stone md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-5 border-t border-ink/10 pt-8 text-[0.6875rem] uppercase tracking-widest2 text-stone md:flex-row md:items-center md:justify-between">
           <p>
             © {year} {site.name}
             <span className="mx-2 text-mist">·</span>

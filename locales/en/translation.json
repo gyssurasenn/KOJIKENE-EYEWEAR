@@ -1,5 +1,8 @@
 {
   "common": {
+    "products": { "previousImage": "Previous image", "nextImage": "Next image", "image": "Image", "color": "Colour", "gallery": "Product images", "demo": "Sample product", "demoPrice": "Sample price", "askPrice": "Ask about pricing", "freeShipping": "Free shipping", "demoShipping": "Sample: free shipping", "details": "Frame details", "noImage": "Image coming soon", "previousProducts": "Previous products", "nextProducts": "Next products", "product": "Product", "page": "Product group" },
+    "mobileContact": { "label": "Contact the shop", "map": "Map" },
+    "carousel": { "previous": "Previous slide", "next": "Next slide", "slide": "Slide" },
     "brand": {
       "wordmark": "Kojikane",
       "eyewearWord": "Eyewear",
@@ -26,7 +29,7 @@
       "allServices": "All services",
       "allArticles": "All articles",
       "readJournal": "Read the journal",
-      "readStory": "Read our story",
+      "readStory": "About the shop",
       "seeFullRange": "See the full range",
       "planVisit": "Plan your visit",
       "backHome": "Back to home",
@@ -36,7 +39,7 @@
       "openShopLocation": "Open the shop location"
     },
     "header": {
-      "tagline": "Family-owned optical shop · Nonthaburi",
+      "tagline": "Fashion & Prescription Eyewear · Nonthaburi",
       "skip": "Skip to content",
       "openMenu": "Open menu",
       "closeMenu": "Close menu",
@@ -45,7 +48,7 @@
       "mobileFooter": "{{phone}} · Samakkhi Road, Nonthaburi"
     },
     "footer": {
-      "blurb": "A family-owned optical shop in Nonthaburi. Come in, try frames on, and take your time.",
+      "blurb": "Come in, try frames on, compare shapes properly, and let us fit them before you leave.",
       "explore": "Explore",
       "visitShop": "Visit the shop",
       "nav": "Footer"
@@ -97,16 +100,15 @@
         "text": "Glasses sit at the centre of your face for every hour you are awake. They deserve the same thought as anything else you wear."
       },
       {
-        "title": "Family service",
-        "text": "The people who help you choose are the people who own the shop. You will see the same faces on your next visit."
+        "title": "Personal service",
+        "text": "We give you time to try frames properly, listen to what you need, and help compare options until the right pair feels clear."
       },
       {
         "title": "A local shop",
-        "text": "We are on Samakkhi Road in Nonthaburi, and we would rather you came back than bought quickly."
+        "text": "Find us on Samakkhi Road in Nonthaburi. Walk in to try frames, fit a new pair, or adjust the glasses you already wear."
       }
     ]
   },
-
   "visit": {
     "eyebrow": "Visit us",
     "title": "Samakkhi Road, Nonthaburi.",
@@ -114,7 +116,6 @@
     "mapLabel": "Google Maps",
     "mapTitle": "Map showing the location of KOJIKANE EYEWEAR in Nonthaburi"
   },
-
   "contactCta": {
     "eyebrow": "Visit the shop",
     "quickContact": "Quick contact",
@@ -143,18 +144,36 @@
       "body": "Every article here ends the same way: come and try frames on. Twenty minutes in the shop beats an afternoon of research."
     }
   },
-
   "home": {
+    "experience": { "title": "Before they become your everyday glasses.", "steps": ["Explore frames", "Try them on", "Discuss everyday use", "Choose lenses", "Fit and adjust", "Collect and care"] },
+    "gallery": { "eyebrow": "At KOJIKANE", "title": "A closer look at the shop.", "exterior": "The shopfront", "interior": "Inside the shop", "wall": "Details from our wall", "fitting": "Time for a proper fit" },
+    "slides": {
+      "visit": { "label": "Try it in person", "title": "Good eyewear starts with trying it on.", "body": "Explore shapes, talk about lenses, and find a fit that feels right." },
+      "fashion": { "label": "Fashion eyewear", "title": "Find a shape with character.", "body": "A frame on a shelf feels different when it is on your face. Come and compare." },
+      "prescription": { "label": "Prescription eyewear", "title": "Clarity is only the beginning.", "body": "Weight, fit, frame position and lens choice all contribute to everyday comfort." }
+    },
     "hero": {
       "title": "Find the frame that feels like you.",
       "body": "Fashion eyewear and prescription glasses, carefully selected for everyday life and personal style.",
       "location": "Nonthaburi · Thailand"
     },
     "storyPoints": [
-      { "label": "Family owned", "value": "One family, one shop" },
-      { "label": "Location", "value": "Samakkhi Road, Nonthaburi" },
-      { "label": "What we do", "value": "Fashion & prescription eyewear" },
-      { "label": "How we work", "value": "Fitted in person, adjusted for life" }
+      {
+        "label": "In-store fitting",
+        "value": "Try in person, fitted before you leave"
+      },
+      {
+        "label": "Location",
+        "value": "Samakkhi Road, Nonthaburi"
+      },
+      {
+        "label": "What we do",
+        "value": "Fashion & prescription eyewear"
+      },
+      {
+        "label": "How we work",
+        "value": "Fitted in person, adjusted for life"
+      }
     ],
     "discover": {
       "eyebrow": "Discover your frame",
@@ -170,14 +189,14 @@
       ]
     },
     "family": {
-      "eyebrow": "The family",
-      "title": "A family business, built around people.",
+      "eyebrow": "In-store experience",
+      "title": "Choose frames for your face and your everyday use.",
       "body": [
-        "For years, we have believed that choosing glasses should feel personal — an unhurried conversation, not a transaction across a counter.",
-        "KOJIKANE EYEWEAR is run by one family in Nonthaburi. The people who help you choose a frame are the people who own the shop, which means the advice you get is the advice we would give someone we expect to see again.",
-        "Many of our customers first came in for a repair, or because a neighbour sent them. That is still how most people find us."
+        "Choosing glasses should happen on your face, in a mirror, with the real weight, colour and proportions in front of you — not from photographs alone.",
+        "At KOJIKANE EYEWEAR, we help compare shapes, frames, lenses and fit in person. We will say when something is not working, and we adjust every pair before it leaves the shop.",
+        "Whether you are browsing new frames, ordering prescription glasses, adjusting a pair, or asking about lenses, you can walk in and talk it through with us."
       ],
-      "pullQuote": "We would rather you came back than bought quickly."
+      "pullQuote": "We want you to leave with glasses you actually feel confident wearing."
     },
     "featured": {
       "eyebrow": "Featured eyewear",
@@ -197,8 +216,13 @@
       "subtitle": "Stories, guides, and ideas about eyewear, style, and everyday vision."
     }
   },
-
   "eyewear": {
+    "details": {
+      "eyebrow": "A closer look", "title": "Small details. Everyday comfort.",
+      "frame": { "title": "Shape and proportion", "body": "Compare the width, bridge and frame position on your face when trying a pair on." },
+      "hinge": { "title": "Temples and hinges", "body": "How the temples sit and the hinges move is part of a comfortable fit. Explore the details in person." },
+      "lens": { "title": "Lenses for your day", "body": "Talk about your prescription and everyday use before choosing lenses." }
+    },
     "categories": {
       "fashion": {
         "title": "Fashion Eyewear",
@@ -261,10 +285,22 @@
       "title": "Frames worth making a journey for.",
       "intro": "We keep a tight selection rather than a wall of stock — shapes we would happily wear ourselves, in materials that last. Everything shown here is in the shop.",
       "meta": [
-        { "label": "Categories", "value": "Fashion · Prescription" },
-        { "label": "Materials", "value": "Acetate · Titanium · Combination" },
-        { "label": "Fitting", "value": "Included with every pair" },
-        { "label": "Where", "value": "Samakkhi Road, Nonthaburi" }
+        {
+          "label": "Categories",
+          "value": "Fashion · Prescription"
+        },
+        {
+          "label": "Materials",
+          "value": "Acetate · Titanium · Combination"
+        },
+        {
+          "label": "Fitting",
+          "value": "Included with every pair"
+        },
+        {
+          "label": "Where",
+          "value": "Samakkhi Road, Nonthaburi"
+        }
       ],
       "featuredEyebrow": "Currently in store",
       "featuredTitle": "Six frames we keep recommending.",
@@ -272,10 +308,22 @@
     },
     "fashionPage": {
       "meta": [
-        { "label": "Shapes", "value": "Round · Square · Cat-eye · Oversized" },
-        { "label": "Materials", "value": "Japanese acetate · Combination" },
-        { "label": "Lenses", "value": "Plano or prescription" },
-        { "label": "Styling", "value": "Free, in store" }
+        {
+          "label": "Shapes",
+          "value": "Round · Square · Cat-eye · Oversized"
+        },
+        {
+          "label": "Materials",
+          "value": "Japanese acetate · Combination"
+        },
+        {
+          "label": "Lenses",
+          "value": "Plano or prescription"
+        },
+        {
+          "label": "Styling",
+          "value": "Free, in store"
+        }
       ],
       "howEyebrow": "How we choose",
       "howTitle": "Style is a decision, not a size.",
@@ -304,10 +352,22 @@
     },
     "prescriptionPage": {
       "meta": [
-        { "label": "Lenses", "value": "Single vision · Progressive · Reading" },
-        { "label": "Materials", "value": "Titanium · Acetate · Rimless" },
-        { "label": "Bring", "value": "Your current prescription" },
-        { "label": "Adjustment", "value": "Free, for life" }
+        {
+          "label": "Lenses",
+          "value": "Single vision · Progressive · Reading"
+        },
+        {
+          "label": "Materials",
+          "value": "Titanium · Acetate · Rimless"
+        },
+        {
+          "label": "Bring",
+          "value": "Your current prescription"
+        },
+        {
+          "label": "Adjustment",
+          "value": "Free, for life"
+        }
       ],
       "howEyebrow": "How we work",
       "howTitle": "Comfort is measured, not promised.",
@@ -337,17 +397,28 @@
       "journalTitle": "Useful before your visit."
     }
   },
-
   "services": {
     "page": {
       "eyebrow": "Services",
       "title": "The part that happens at the counter.",
       "intro": "Choosing a frame takes twenty minutes. Making it fit, choosing the right lenses and keeping it comfortable for years is the rest of the job — and it is the part we care most about.",
       "meta": [
-        { "label": "Appointments", "value": "Not required" },
-        { "label": "Adjustment", "value": "Free for our frames" },
-        { "label": "Consultation", "value": "Free, about 15 minutes" },
-        { "label": "Where", "value": "Samakkhi Road, Nonthaburi" }
+        {
+          "label": "Appointments",
+          "value": "Not required"
+        },
+        {
+          "label": "Adjustment",
+          "value": "Free for our frames"
+        },
+        {
+          "label": "Consultation",
+          "value": "Free, about 15 minutes"
+        },
+        {
+          "label": "Where",
+          "value": "Samakkhi Road, Nonthaburi"
+        }
       ],
       "honestEyebrow": "No upselling",
       "honestTitle": "We will tell you what you do not need.",
@@ -419,24 +490,22 @@
       }
     ]
   },
-
   "about": {
-    "intro": "We are a small shop with one counter, a considered selection of frames, and enough time to help you choose properly.",
-    "storyEyebrow": "Our story",
-    "storyTitle": "Built slowly, on returning customers.",
-    "storyExtra": "We are not a chain and we do not sell online. What we can offer is time, an honest opinion, and someone who will still be at the counter when you come back to have your frames straightened.",
+    "intro": "An optical shop on Samakkhi Road with frames to try in person, time to compare, and fitting help before you leave.",
+    "storyEyebrow": "In the shop",
+    "storyTitle": "It starts with trying on, and ends with fit.",
+    "storyExtra": "We do not sell online because glasses should be tried on properly. What we offer is time, a direct opinion, and adjustment support after you buy.",
     "captionExterior": "The shopfront on Samakkhi Road.",
     "captionInterior": "One counter, one wall of frames, and time to choose.",
-    "figcaptionFamily": "The family behind KOJIKANE EYEWEAR — photograph to be replaced with the real portrait.",
+    "figcaptionFamily": "Trying frames at KOJIKANE EYEWEAR.",
     "figcaptionExterior": "The shopfront on Samakkhi Road, Nonthaburi.",
     "figcaptionInterior": "Inside the shop."
   },
-
   "blog": {
     "article": {
       "asideTitle": "Visit the shop",
       "asideBody": "Samakkhi Road, Nonthaburi. Walk in and try frames on — no appointment needed.",
-      "authorNote": "Written by the team at KOJIKANE EYEWEAR, a family-owned optical shop on Samakkhi Road, Nonthaburi. General guidance only — for anything concerning your eye health, please see a qualified eye care professional."
+      "authorNote": "Written by the team at KOJIKANE EYEWEAR on Samakkhi Road, Nonthaburi. General guidance only — for anything concerning your eye health, please see a qualified eye care professional."
     },
     "categories": {
       "Style Guide": "Style Guide",
@@ -446,14 +515,19 @@
       "Prescription": "Prescription"
     }
   },
-
   "contact": {
     "eyebrow": "Visit us",
     "title": "544 Samakkhi Road, Nonthaburi.",
     "intro": "One shop, one counter, no appointment necessary. Come in for a frame, a fitting, an adjustment, or just to look.",
     "meta": [
-      { "label": "Appointments", "value": "Not required" },
-      { "label": "Parking", "value": "On Samakkhi Road" }
+      {
+        "label": "Appointments",
+        "value": "Not required"
+      },
+      {
+        "label": "Parking",
+        "value": "On Samakkhi Road"
+      }
     ],
     "gettingHereEyebrow": "Getting here",
     "gettingHereTitle": "Finding the shop.",
@@ -475,13 +549,11 @@
     "messageTitle": "LINE is the fastest way to reach us.",
     "messageBody": "Send a photo of your prescription or the frames you are considering, and we will tell you what we have before you make the trip."
   },
-
   "notFound": {
     "eyebrow": "404",
     "title": "That page is not on the shelf.",
     "body": "The link may be old, or the page may have moved. Everything else is still here."
   },
-
   "legal": {
     "eyebrow": "Legal",
     "questionsHeading": "Questions",
@@ -519,7 +591,7 @@
       "sections": [
         {
           "heading": "About this website",
-          "body": "This site presents KOJIKANE EYEWEAR, a family-owned optical shop in Nonthaburi. It is an information website. Nothing can be bought through it, and no order is placed by browsing it."
+          "body": "This site presents KOJIKANE EYEWEAR, an optical shop in Nonthaburi. It is an information website. Nothing can be bought through it, and no order is placed by browsing it."
         },
         {
           "heading": "Frames and availability",
@@ -544,11 +616,10 @@
       ]
     }
   },
-
   "seo": {
     "home": {
       "title": "KOJIKANE EYEWEAR — Fashion & Prescription Eyewear in Nonthaburi",
-      "description": "A family-owned optical shop on Samakkhi Road, Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person.",
+      "description": "An optical shop on Samakkhi Road, Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen and tried in store.",
       "keywords": [
         "eyewear Nonthaburi",
         "glasses shop Nonthaburi",
@@ -560,7 +631,11 @@
     "eyewear": {
       "title": "Eyewear — Fashion & Prescription Frames",
       "description": "Browse the eyewear at KOJIKANE: fashion frames with a point of view and prescription glasses fitted properly. Selected in Nonthaburi, tried on in person.",
-      "keywords": ["eyewear Nonthaburi", "eyeglass frames Thailand", "optical shop Nonthaburi"]
+      "keywords": [
+        "eyewear Nonthaburi",
+        "eyeglass frames Thailand",
+        "optical shop Nonthaburi"
+      ]
     },
     "fashion": {
       "title": "Fashion Eyewear — Frames That Complete Your Look",
@@ -593,17 +668,17 @@
       ]
     },
     "about": {
-      "title": "About Us — A Family-Owned Optical Shop in Nonthaburi",
-      "description": "KOJIKANE EYEWEAR is run by one family on Samakkhi Road, Nonthaburi. The people who help you choose a frame are the people who own the shop.",
+      "title": "About Us — KOJIKANE EYEWEAR Nonthaburi",
+      "description": "Learn about KOJIKANE EYEWEAR on Samakkhi Road, Nonthaburi: eyewear selection, frame fitting and lens consultation in person.",
       "keywords": [
-        "family optical shop Nonthaburi",
+        "about KOJIKANE EYEWEAR",
         "about KOJIKANE EYEWEAR",
         "local optician Nonthaburi"
       ]
     },
     "blog": {
       "title": "The KOJIKANE Journal — Eyewear Guides & Style Notes",
-      "description": "Stories, guides, and ideas about eyewear, style, and everyday vision — written by a family-owned optical shop in Nonthaburi.",
+      "description": "Stories, guides, and ideas about eyewear, style, and everyday vision from KOJIKANE EYEWEAR.",
       "keywords": [
         "eyewear blog",
         "how to choose glasses",
@@ -632,6 +707,6 @@
       "title": "Page not found",
       "description": "This page could not be found."
     },
-    "siteDescription": "KOJIKANE EYEWEAR is a family-owned optical shop in Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen with you, in person."
+    "siteDescription": "KOJIKANE EYEWEAR is an optical shop in Nonthaburi. Fashion eyewear, prescription glasses, frame fitting and lens consultation — chosen and tried in store."
   }
 }

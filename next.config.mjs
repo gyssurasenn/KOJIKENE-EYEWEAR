@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Allows a verification build without touching a running dev server's cache.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   // Hides the floating "N" dev-tools badge Next.js overlays in dev mode.
   devIndicators: false,
   images: {

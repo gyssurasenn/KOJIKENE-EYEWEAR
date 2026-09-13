@@ -36,13 +36,18 @@ const LANDSCAPE = { width: 1600, height: 1067 } as const;
 const SQUARE = { width: 1200, height: 1200 } as const;
 
 export const images = {
-  /** Wordmark is drawn as inline SVG (components/brand/Logo.tsx) so it stays crisp. */
+  wallTexture: {
+    src: `${DIR}/BgHome.jpg`,
+    alt: 'Travel-stamp wallpaper with illustrated European landmarks',
+    width: 1536,
+    height: 2048,
+  } as ImageAsset,
+  /** Original logo; whitespace is framed in CSS without changing the source. */
   logo: {
-    src: `${DIR}/logo.svg`,
+    src: `${DIR}/LOGO/KOJIKANE_Logo.png`,
     alt: 'KOJIKANE EYEWEAR',
-    width: 512,
-    height: 128,
-    placeholder: true,
+    width: 2000,
+    height: 2000,
   } as ImageAsset,
 
   hero: {
@@ -75,7 +80,7 @@ export const images = {
 
   family: {
     src: `${DIR}/placeholder-family.webp`,
-    alt: 'The family behind KOJIKANE EYEWEAR at the counter of their shop',
+    alt: 'In-store eyewear consultation at the KOJIKANE EYEWEAR counter',
     ...LANDSCAPE,
     placeholder: true,
   } as ImageAsset,
@@ -193,6 +198,16 @@ export const images = {
 } as const;
 
 export type JournalImageKey = keyof typeof images.journal;
+
+/** Temporary gallery illustrations, not photographs of actual products. */
+export const demoProductGalleries = {
+  aoi: [images.frames.aoi, images.heroDetail, images.fashionEyewear, images.frames.sumi],
+  nagi: [images.frames.nagi, images.heroDetail, images.prescriptionEyewear],
+  kumo: [images.frames.kumo, images.heroDetail, images.frames.nagi, images.frames.sumi],
+  sumi: [images.frames.sumi, images.heroDetail, images.frames.aoi],
+  hikari: [images.frames.hikari, images.heroDetail, images.prescriptionEyewear],
+  mine: [images.frames.mine, images.heroDetail, images.fashionEyewear],
+} as const;
 
 /** Absolute URL for metadata (Open Graph / Twitter / JSON-LD). */
 export function absoluteImageUrl(src: string, siteUrl: string): string {

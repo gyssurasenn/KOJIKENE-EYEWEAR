@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { images } from '@/lib/images';
 import { localePath, type Locale } from '@/i18n/config';
 import { site } from '@/lib/site';
 
@@ -36,11 +38,8 @@ export function Wordmark({
 }) {
   return (
     <span className={`flex flex-col ${className}`}>
-      <span className="flex items-center gap-2.5">
-        <LogoMark className="h-[0.9em] w-auto shrink-0 opacity-90" />
-        <span className="font-display font-medium uppercase leading-none tracking-widest2">
-          Kojikane
-        </span>
+      <span className={`brand-logo ${descriptor ? 'brand-logo-full' : ''}`}>
+        <Image src={images.logo.src} alt={images.logo.alt} width={2000} height={2000} sizes="320px" className="brand-logo-image" />
       </span>
       {descriptor ? (
         <span className="mt-2 text-[0.6875rem] uppercase tracking-widest2 text-stone">
@@ -68,9 +67,6 @@ export function LogoLink({
       className={`inline-flex items-baseline gap-3 ${className}`}
     >
       <Wordmark className="text-[0.95rem] sm:text-base" />
-      <span className="hidden text-[0.6875rem] uppercase tracking-widest2 text-stone sm:inline">
-        Eyewear
-      </span>
     </Link>
   );
 }

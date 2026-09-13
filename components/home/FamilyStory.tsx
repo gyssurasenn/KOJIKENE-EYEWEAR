@@ -1,24 +1,24 @@
 import Image from 'next/image';
 import { Reveal } from '@/components/ui/Reveal';
+import { ImageReveal } from '@/components/ui/ImageReveal';
 import { TextLink } from '@/components/ui/Button';
-import { getT } from '@/i18n/server';
+import { getT, tList } from '@/i18n/server';
 import { getParagraphs } from '@/lib/content';
 import type { Locale } from '@/i18n/config';
 import { images } from '@/lib/images';
 
 /**
- * Warm editorial section about the family behind the shop.
- * Copy is intentionally free of names and personal details until the
- * family provides them — the layout already fits a real portrait.
+ * In-store consultation and fitting, using the existing translation keys.
  */
 export async function FamilyStory({ locale }: { locale: Locale }) {
   const t = await getT(locale);
   const paragraphs = getParagraphs(t, 'home.family.body');
 
   return (
-    <section className="shell py-section">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <Reveal className="relative order-2 lg:order-1">
+    // <section className="wallpaper2-section shell py-section">
+    <section className="wallpaper2-section py-section">
+      <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <ImageReveal className="relative order-2 lg:order-1">
           <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand lg:aspect-[5/6]">
             <Image
               src={images.family.src}
@@ -37,7 +37,7 @@ export async function FamilyStory({ locale }: { locale: Locale }) {
               className="object-cover"
             />
           </figure>
-        </Reveal>
+        </ImageReveal>
 
         <div className="order-1 lg:order-2">
           <Reveal>
@@ -68,6 +68,17 @@ export async function FamilyStory({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
       </div>
+      <Reveal className="shell mt-20 border-t border-ink/15 pt-8">
+        <h3 className="font-display text-2xl font-light">{t('home.experience.title')}</h3>
+        <ol className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
+          {tList(t, 'home.experience.steps').map((step, index) => (
+            <li key={step} className="border-t border-ink/15 pt-4">
+              <span className="text-xs text-graphite" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <p className="mt-3 text-sm leading-relaxed">{step}</p>
+            </li>
+          ))}
+        </ol>
+      </Reveal>
     </section>
   );
 }

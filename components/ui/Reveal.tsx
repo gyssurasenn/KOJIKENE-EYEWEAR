@@ -8,14 +8,15 @@ type RevealProps = {
   delay?: number;
   className?: string;
   as?: ElementType;
+  variant?: 'text' | 'image';
 };
 
 /**
- * A single, restrained scroll animation: fade + 16px rise, once.
+ * Shared one-time text/image reveal with a visible server-rendered fallback.
  * Content renders visible if JS never runs, and the transition is
  * disabled entirely under prefers-reduced-motion (see globals.css).
  */
-export function Reveal({ children, delay = 0, className, as: Tag = 'div' }: RevealProps) {
+export function Reveal({ children, delay = 0, className, as: Tag = 'div', variant = 'text' }: RevealProps) {
   const ref = useRef<HTMLElement>(null);
   const [state, setState] = useState<'idle' | 'pending' | 'shown'>('idle');
 
@@ -31,18 +32,11 @@ export function Reveal({ children, delay = 0, className, as: Tag = 'div' }: Reve
       return;
     }
 
-    // Already in view on first paint — animate in immediately.
+    // Do not hide content that was already visible in the server render.
     const rect = node.getBoundingClientRect();
     if (rect.top < window.innerHeight * 0.9) {
-      setState('pending');
-      const raf = requestAnimationFrame(() => setState('shown'));
-      // Frame callbacks are starved in background tabs. Content must never
-      // be left invisible, so reveal regardless shortly afterwards.
-      const failsafe = window.setTimeout(() => setState('shown'), 1200);
-      return () => {
-        cancelAnimationFrame(raf);
-        window.clearTimeout(failsafe);
-      };
+      setState('shown');
+      return;
     }
 
     setState('pending');
@@ -65,6 +59,8 @@ export function Reveal({ children, delay = 0, className, as: Tag = 'div' }: Reve
     <Tag
       ref={ref}
       data-reveal={state === 'idle' ? undefined : state}
+      data-reveal-kind={variant}
+      onFocusCapture={() => setState('shown')}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
       className={className}
     >

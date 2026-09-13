@@ -73,7 +73,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <JsonLd data={[breadcrumbSchema(locale, breadcrumbs), articleSchema(locale, article)]} />
 
       <article>
-        <header className="border-b border-ink/10 bg-paper">
+        <header className="border-b border-ink/10 bg-white">
           <div className="shell pb-14 pt-8 md:pt-10">
             <Breadcrumb
               items={breadcrumbs}

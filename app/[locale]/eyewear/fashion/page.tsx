@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageHeader } from '@/components/layout/PageHeader';
-import { EyewearEditorial } from '@/components/eyewear/EyewearEditorial';
+import { FrameCarousel } from '@/components/eyewear/FrameCarousel';
+import { FrameDetailCarousel } from '@/components/eyewear/FrameDetailCarousel';
+import { ImageReveal } from '@/components/ui/ImageReveal';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
 import { TextLink } from '@/components/ui/Button';
@@ -60,6 +62,7 @@ export default async function FashionEyewearPage({ params }: PageProps) {
       <JsonLd data={breadcrumbSchema(locale, breadcrumbs)} />
 
       <PageHeader
+        editorial
         locale={locale}
         breadcrumbs={breadcrumbs}
         eyebrow={t('eyewear.categories.fashion.title')}
@@ -69,7 +72,7 @@ export default async function FashionEyewearPage({ params }: PageProps) {
       />
 
       {/* Full-width editorial image */}
-      <Reveal>
+      <ImageReveal>
         <figure className="relative aspect-[4/5] w-full overflow-hidden bg-sand sm:aspect-[16/9] lg:aspect-[21/9]">
           <Image
             src={images.fashionEyewear.src}
@@ -80,7 +83,7 @@ export default async function FashionEyewearPage({ params }: PageProps) {
             className="object-cover"
           />
         </figure>
-      </Reveal>
+      </ImageReveal>
 
       <section className="shell py-section">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -133,7 +136,7 @@ export default async function FashionEyewearPage({ params }: PageProps) {
             }
             className="mb-16"
           />
-          <EyewearEditorial frames={frames} locale={locale} />
+          <FrameCarousel frames={frames} locale={locale} label={t('eyewear.fashionPage.inStoreTitle')} />
         </div>
       </section>
 
@@ -158,6 +161,7 @@ export default async function FashionEyewearPage({ params }: PageProps) {
         </div>
       </section>
 
+      <FrameDetailCarousel locale={locale} category="fashion" />
       <ContactCTA locale={locale} variant="fashion" />
     </>
   );
