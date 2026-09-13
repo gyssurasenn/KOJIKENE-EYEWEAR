@@ -28,6 +28,20 @@ import type { ImageAsset } from '@/types';
 
 const DIR = '/images';
 
+export const inStoreBrands = [
+  { name: 'BOLON', file: 'logo_bolon.jpg', height: 685 },
+  { name: 'Calvin Klein', file: 'logo_CALVINKLEIN.jpg', height: 684 },
+  { name: 'Chloe', file: 'logo_Chloe.jpg', height: 685 },
+  { name: 'COLYN', file: 'logo_COLYN.jpg', height: 685 },
+  { name: 'ic! berlin', file: 'logo_ic!berline.jpg', height: 685 },
+  { name: 'MacQuarrie', file: 'logo_MacQuarrie.jpg', height: 684 },
+  { name: 'Nike', file: 'logo_Nike.jpg', height: 685 },
+  { name: 'PAPAYA', file: 'logo_PAPAYA.jpg', height: 685 },
+  { name: 'Ray-Ban', file: 'logo_RayBan.jpg', height: 685 },
+  { name: 'SWAROVSKI', file: 'logo_SWAROVSKI.jpg', height: 684 },
+  { name: 'VYCOZ', file: 'logo_VYCOZ.jpg', height: 684 },
+].map(({ name, file, height }) => ({ name, src: `${DIR}/brandInstore/${file}`, alt: name, width: 2048, height }));
+
 /** Portrait 4:5 */
 const PORTRAIT = { width: 1200, height: 1500 } as const;
 /** Landscape 3:2 */

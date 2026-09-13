@@ -1,5 +1,6 @@
 {
   "common": {
+    "inStoreBrands": { "title": "Brands in store", "pause": "Pause automatic brand scrolling", "play": "Start automatic brand scrolling" },
     "products": { "previousImage": "Previous image", "nextImage": "Next image", "image": "Image", "color": "Colour", "gallery": "Product images", "demo": "Sample product", "demoPrice": "Sample price", "askPrice": "Ask about pricing", "freeShipping": "Free shipping", "demoShipping": "Sample: free shipping", "details": "Frame details", "noImage": "Image coming soon", "previousProducts": "Previous products", "nextProducts": "Next products", "product": "Product", "page": "Product group" },
     "mobileContact": { "label": "Contact the shop", "map": "Map" },
     "carousel": { "previous": "Previous slide", "next": "Next slide", "slide": "Slide" },

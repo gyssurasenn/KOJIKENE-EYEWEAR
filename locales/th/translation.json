@@ -1,5 +1,6 @@
 {
   "common": {
+    "inStoreBrands": { "title": "แบรนด์แว่นตาในร้าน", "pause": "หยุดเลื่อนแบรนด์อัตโนมัติ", "play": "เริ่มเลื่อนแบรนด์อัตโนมัติ" },
     "products": { "previousImage": "รูปก่อนหน้า", "nextImage": "รูปถัดไป", "image": "รูป", "color": "สี", "gallery": "รูปสินค้า", "demo": "สินค้าตัวอย่าง", "demoPrice": "ราคาตัวอย่าง", "askPrice": "สอบถามราคา", "freeShipping": "จัดส่งฟรี", "demoShipping": "ตัวอย่าง: จัดส่งฟรี", "details": "รายละเอียดกรอบ", "noImage": "รอรูปสินค้า", "previousProducts": "สินค้าชุดก่อนหน้า", "nextProducts": "สินค้าชุดถัดไป", "product": "สินค้า", "page": "ชุดสินค้า" },
     "mobileContact": { "label": "ติดต่อร้าน", "map": "แผนที่" },
     "carousel": { "previous": "สไลด์ก่อนหน้า", "next": "สไลด์ถัดไป", "slide": "สไลด์" },

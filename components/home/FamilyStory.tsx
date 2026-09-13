@@ -2,7 +2,8 @@ import Image from 'next/image';
 import { Reveal } from '@/components/ui/Reveal';
 import { ImageReveal } from '@/components/ui/ImageReveal';
 import { TextLink } from '@/components/ui/Button';
-import { getT, tList } from '@/i18n/server';
+import { getT } from '@/i18n/server';
+import { InStoreBrands } from '@/components/home/InStoreBrands';
 import { getParagraphs } from '@/lib/content';
 import type { Locale } from '@/i18n/config';
 import { images } from '@/lib/images';
@@ -68,17 +69,8 @@ export async function FamilyStory({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
       </div>
-      <Reveal className="shell mt-20 border-t border-ink/15 pt-8">
-        <h3 className="font-display text-2xl font-light">{t('home.experience.title')}</h3>
-        <ol className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
-          {tList(t, 'home.experience.steps').map((step, index) => (
-            <li key={step} className="border-t border-ink/15 pt-4">
-              <span className="text-xs text-graphite" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-              <p className="mt-3 text-sm leading-relaxed">{step}</p>
-            </li>
-          ))}
-        </ol>
-      </Reveal>
+      <InStoreBrands labels={{ title: t('common.inStoreBrands.title'), pause: t('common.inStoreBrands.pause'),
+        play: t('common.inStoreBrands.play'), previous: t('common.carousel.previous'), next: t('common.carousel.next') }} />
     </section>
   );
 }

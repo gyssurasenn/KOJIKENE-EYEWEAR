@@ -1,5 +1,9 @@
 # CONTEXT.md — บริบทโปรเจกต์ KOJIKANE EYEWEAR
 
+## Update: in-store brands
+
+The owner supplied 11 brand logos in public/images/brandInstore. The homepage six-step experience list is intentionally replaced with InStoreBrands, using inStoreBrands in lib/images.ts. It uses Swiper autoplay (3000ms delay, 1200ms transition), pause/play, hover/focus stopping, and reduced-motion support. Existing experience translation keys are retained.
+
 > เอกสารนี้เขียนไว้ให้ทั้งเจ้าของโปรเจกต์และ AI coding agent อ่านก่อนแก้เว็บ  
 > ภาษาในการคุยกับผู้ใช้: **ภาษาไทยเป็นหลัก**  
 > โค้ด, ชื่อไฟล์, component name, prop name และ technical term ใช้ภาษาอังกฤษได้ตามปกติ
