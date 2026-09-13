@@ -129,6 +129,28 @@
   .group:focus-within .media-zoom img {
     @apply scale-[1.035];
   }
+
+  .cursor-glow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 60;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    opacity: 0;
+    background:
+      radial-gradient(circle, rgba(255, 138, 76, 0.18) 0%, rgba(255, 138, 76, 0.08) 36%, transparent 70%);
+    filter: blur(18px);
+    mix-blend-mode: multiply;
+    transition: opacity 500ms var(--motion-ease);
+    will-change: transform, opacity;
+  }
+
+  .cursor-glow[data-visible='true'] {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
@@ -184,5 +206,14 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  .cursor-glow {
+    display: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow {
+    display: none;
   }
 }

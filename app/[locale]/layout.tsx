@@ -6,6 +6,7 @@ import '../globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { CursorGlow } from '@/components/ui/CursorGlow';
 import { I18nProvider } from '@/i18n/client';
 import { getDictionary, getT } from '@/i18n/server';
 import {
@@ -160,6 +161,7 @@ export default async function LocaleLayout({
           data={[localBusinessSchema(locale, businessCopy), websiteSchema(locale, businessCopy)]}
           id="global"
         />
+        <CursorGlow />
         <I18nProvider locale={locale} resources={clientResources}>
           <Header locale={locale} />
           <main id="main" className="flex-1">

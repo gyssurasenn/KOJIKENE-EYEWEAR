@@ -514,3 +514,4 @@ SEO สำคัญมาก เพราะเว็บนี้ต้องใ
 - Secondary body text `graphite` is #34302B for stronger readability while staying softer than `ink`.
 - Header/Footer use the original PNG through `lib/images.ts`; `.brand-logo` CSS frames its whitespace without editing the original file.
 - Dark orange `--brand-accent` remains for small interactive indicators and gallery controls.
+- `CursorGlow` is a small global client effect in `components/ui/CursorGlow.tsx`; it runs only on fine pointer devices and is hidden for reduced motion/touch.
