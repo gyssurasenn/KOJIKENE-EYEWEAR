@@ -60,7 +60,6 @@
 }
 .mobile-contact-bar { display: none; }
 @media (max-width: 767px) {
-  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
   .mobile-contact-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); position: fixed; inset: auto 0 0; z-index: 35; background: #fffffffa; border-top: 1px solid #16140f26; padding: 6px 12px calc(6px + env(safe-area-inset-bottom)); opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity var(--motion-fast), transform var(--motion-fast), visibility var(--motion-fast); }
   .mobile-contact-bar[data-visible] { opacity: 1; visibility: visible; transform: none; }
   .mobile-contact-bar a { display: flex; gap: 8px; align-items: center; justify-content: center; min-height: 48px; font-size: 13px; }

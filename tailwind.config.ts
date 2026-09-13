@@ -55,7 +55,7 @@ const config: Config = {
         shell: '92rem',
       },
       spacing: {
-        section: 'clamp(4.5rem, 10vw, 9.5rem)',
+        section: 'clamp(1.875rem, 8vw, 3.75rem)',
         gutter: 'clamp(1.25rem, 4vw, 3.5rem)',
       },
       borderRadius: {

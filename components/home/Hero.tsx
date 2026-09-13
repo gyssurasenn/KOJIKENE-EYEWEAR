@@ -1,18 +1,17 @@
 import Image from 'next/image';
-import { ButtonLink } from '@/components/ui/Button';
 import { EditorialSwiper } from '@/components/ui/EditorialSwiper';
 import { getT } from '@/i18n/server';
 import { getMeta } from '@/lib/content';
 import type { Locale } from '@/i18n/config';
 import { images } from '@/lib/images';
-import { contact, site } from '@/lib/site';
+import { site } from '@/lib/site';
 
 export async function Hero({ locale }: { locale: Locale }) {
   const t = await getT(locale);
   const slides = [
-    { key: 'visit', image: images.hero, href: '/contact', cta: 'common.cta.visitStore' },
-    { key: 'fashion', image: images.fashionEyewear, href: '/eyewear/fashion', cta: 'common.nav.fashion' },
-    { key: 'prescription', image: images.prescriptionEyewear, href: '/eyewear/prescription', cta: 'common.nav.prescription' },
+    { key: 'visit', image: images.hero },
+    { key: 'fashion', image: images.fashionEyewear },
+    { key: 'prescription', image: images.prescriptionEyewear },
   ];
 
   return (
@@ -33,10 +32,6 @@ export async function Hero({ locale }: { locale: Locale }) {
                   <span className="hero-title">{t(`home.slides.${slide.key}.title`)}</span>
                 </Heading>
                 <p className="hero-body">{t(`home.slides.${slide.key}.body`)}</p>
-                <div className="hero-actions">
-                  <ButtonLink href={slide.href} locale={locale}>{t(slide.cta)}</ButtonLink>
-                  <ButtonLink href={contact.lineUrl} external variant="outline">{t('common.cta.line')}</ButtonLink>
-                </div>
               </div>
             </div>
           );
