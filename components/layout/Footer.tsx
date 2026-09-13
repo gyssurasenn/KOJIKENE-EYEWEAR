@@ -6,7 +6,7 @@ import { ButtonLink } from '@/components/ui/Button';
 import { FooterGrid } from '@/components/layout/FooterGrid';
 import { getT } from '@/i18n/server';
 import { localePath, type Locale } from '@/i18n/config';
-import { address, contact, legalNav, mainNav, openingHours, site } from '@/lib/site';
+import { address, contact, legalNav, openingHours, site } from '@/lib/site';
 
 export async function Footer({ locale }: { locale: Locale }) {
   const t = await getT(locale);
@@ -93,37 +93,6 @@ export async function Footer({ locale }: { locale: Locale }) {
             </ButtonLink>
           </div>
         </FooterGrid>
-
-          {/* Navigation */}
-          <nav aria-label={t('common.footer.nav')} className="mt-10 border-t border-ink/10 pt-8">
-            <h2 className="eyebrow mb-6">{t('common.footer.explore')}</h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-6 text-sm sm:grid-cols-3 lg:grid-cols-5">
-              {mainNav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={localePath(locale, item.href)}
-                    className="link-underline text-graphite transition-colors hover:text-ink"
-                  >
-                    {t(`common.nav.${item.key}`)}
-                  </Link>
-                  {item.children ? (
-                    <ul className="mt-3 space-y-2">
-                      {item.children.map((child) => (
-                        <li key={child.href}>
-                          <Link
-                            href={localePath(locale, child.href)}
-                            className="link-underline text-[0.8125rem] text-stone transition-colors hover:text-ink"
-                          >
-                            {t(`common.nav.${child.key}`)}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-          </nav>
 
         <div className="mt-10 flex flex-col gap-5 border-t border-ink/10 pt-8 text-[0.6875rem] uppercase tracking-widest2 text-stone md:flex-row md:items-center md:justify-between">
           <p>

@@ -45,10 +45,12 @@ export async function Hero({ locale }: { locale: Locale }) {
       <div className="shell hero-intro">
         <div><h2 className="font-display text-xl">{t('home.hero.title')}</h2>
           <p className="mt-3 text-sm leading-relaxed text-graphite">{t('home.hero.body')}</p></div>
-        <dl className="grid gap-5 sm:grid-cols-3">
+        <dl className="grid grid-cols-3 gap-3 sm:gap-5">
           {getMeta(t, 'home.storyPoints').slice(0, 3).map((point) => (
-            <div key={point.label}><dt className="text-xs text-graphite">{point.label}</dt>
-              <dd className="mt-2 text-sm">{point.value}</dd></div>
+            <div key={point.label}>
+              <dt className="text-[0.6875rem] text-graphite sm:text-xs">{point.label}</dt>
+              <dd className="mt-2 text-xs leading-snug sm:text-sm">{point.value}</dd>
+            </div>
           ))}
         </dl>
       </div>

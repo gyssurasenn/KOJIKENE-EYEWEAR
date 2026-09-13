@@ -31,15 +31,19 @@ export async function WhyKojikane({ locale }: { locale: Locale }) {
             </div>
           </Reveal>
 
-          <ul className="grid gap-x-10 gap-y-10 sm:grid-cols-2">
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-10 sm:gap-y-10">
             {principles.map((principle, index) => (
               <Reveal as="li" key={principle.number} delay={(index % 2) * 80}>
-                <div className="flex h-full flex-col border-t border-ink/15 pt-5">
+                <div className="flex h-full flex-col border-t border-ink/15 pt-4 sm:pt-5">
                   <span className="text-[0.6875rem] uppercase tracking-widest2 text-mist">
                     {principle.number}
                   </span>
-                  <h3 className="mt-5 font-display text-lg font-normal">{principle.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-graphite">{principle.text}</p>
+                  <h3 className="mt-4 font-display text-base font-normal leading-snug sm:mt-5 sm:text-lg">
+                    {principle.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-graphite sm:mt-3 sm:text-sm">
+                    {principle.text}
+                  </p>
                 </div>
               </Reveal>
             ))}

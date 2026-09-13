@@ -12,6 +12,8 @@ type EyewearCategoryCardProps = {
   priority?: boolean;
   /** Taller crop for the lead card in a two-up layout. */
   emphasis?: boolean;
+  /** Smaller homepage presentation for carousel layouts. */
+  compact?: boolean;
 };
 
 /**
@@ -24,6 +26,7 @@ export async function EyewearCategoryCard({
   index,
   priority = false,
   emphasis = false,
+  compact = false,
 }: EyewearCategoryCardProps) {
   const t = await getT(locale);
   const base = `eyewear.categories.${category.slug}`;
@@ -34,7 +37,7 @@ export async function EyewearCategoryCard({
       <Link href={localePath(locale, category.href)} className="block focus-visible:outline-none">
         <div
           className={`media-zoom relative w-full overflow-hidden bg-sand ${
-            emphasis ? 'aspect-[4/5]' : 'aspect-[4/5] lg:aspect-[3/4]'
+            compact ? 'aspect-[16/10]' : emphasis ? 'aspect-[4/5]' : 'aspect-[4/5] lg:aspect-[3/4]'
           }`}
         >
           <Image
@@ -53,15 +56,21 @@ export async function EyewearCategoryCard({
           ) : null}
         </div>
 
-        <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div
+          className={
+            compact
+              ? 'mt-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between'
+              : 'mt-7 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between'
+          }
+        >
           <div className="max-w-lg">
-            <h3 className="font-display text-display-sm font-light">
+            <h3 className={compact ? 'font-display text-2xl font-light sm:text-display-sm' : 'font-display text-display-sm font-light'}>
               <span className="link-underline">{t(`${base}.title`)}</span>
             </h3>
-            <p className="mt-3 text-lg font-light text-graphite text-pretty">
+            <p className={compact ? 'mt-2 text-base font-light text-graphite text-pretty sm:text-lg' : 'mt-3 text-lg font-light text-graphite text-pretty'}>
               {t(`${base}.tagline`)}
             </p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-graphite">
+            <p className={compact ? 'mt-3 max-w-md text-sm leading-relaxed text-graphite' : 'mt-4 max-w-md text-sm leading-relaxed text-graphite'}>
               {t(`${base}.description`)}
             </p>
           </div>
@@ -73,7 +82,7 @@ export async function EyewearCategoryCard({
           </span>
         </div>
 
-        <ul className="mt-6 flex flex-wrap gap-x-3 gap-y-2 border-t border-ink/10 pt-5">
+        <ul className={compact ? 'mt-5 flex flex-wrap gap-x-3 gap-y-2 border-t border-ink/10 pt-4' : 'mt-6 flex flex-wrap gap-x-3 gap-y-2 border-t border-ink/10 pt-5'}>
           {highlights.map((highlight) => (
             <li
               key={highlight}

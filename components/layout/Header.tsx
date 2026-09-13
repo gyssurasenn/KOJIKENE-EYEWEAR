@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { MobileContactBar } from '@/components/layout/MobileContactBar';
 import { LogoLink } from '@/components/brand/Logo';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 import { useT } from '@/i18n/client';
@@ -160,7 +159,6 @@ export function Header({ locale }: { locale: Locale }) {
         locale={locale}
         onClose={() => setMenuOpen(false)}
       />
-      <MobileContactBar menuOpen={menuOpen} />
     </>
   );
 }

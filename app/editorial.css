@@ -100,7 +100,7 @@
 .hero-actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-actions a { letter-spacing: 0; }
 .carousel-hero > .carousel-controls { position: absolute; left: max(var(--shell-gutter), calc((100% - 92rem) / 2 + var(--shell-gutter))); max-width: calc(100% - var(--shell-gutter) * 2); bottom: 12px; z-index: 3; padding: 0; }
-.hero-intro { display: grid; gap: 32px; padding-top: 36px; padding-bottom: 36px; }
+.hero-intro { display: grid; gap: 24px; padding-top: 28px; padding-bottom: 28px; }
 .carousel-gallery .swiper-wrapper { align-items: center; }
 .carousel-gallery .swiper-slide { width: 52%; }
 .carousel-gallery .swiper-slide:nth-child(2) { width: 30%; }
@@ -114,6 +114,7 @@
   .carousel-gallery .swiper-slide:nth-child(3) { width: 76%; }
 }
 .carousel-frames .swiper-slide, .carousel-journal .swiper-slide { width: calc((100% - 48px) / 3); }
+.carousel-discover .swiper-slide { width: calc((100% - 32px) / 2); }
 .carousel-frames figure > div { aspect-ratio: 4 / 5; }
 .carousel-frames .swiper-slide { transition: opacity var(--motion-base) var(--motion-ease); }
 .carousel-frames[data-ready] .swiper-slide:not(.swiper-slide-active) .media-zoom { opacity: .9; }
@@ -122,13 +123,15 @@
 .carousel-frames figcaption > div { flex-wrap: wrap; }
 @media (max-width: 1023px) {
   .carousel-frames .swiper-slide, .carousel-journal .swiper-slide { width: calc((100% - 24px) / 2.1); }
+  .carousel-discover .swiper-slide { width: calc((100% - 24px) / 1.35); }
 }
 @media (max-width: 639px) {
   .carousel-frames .swiper-slide, .carousel-journal .swiper-slide { width: calc((100% - 24px) / 1.15); }
+  .carousel-discover .swiper-slide { width: calc((100% - 24px) / 1.08); }
 }
 @media (min-width: 1024px) { .hero-intro { grid-template-columns: 1fr 1.2fr; gap: 64px; } }
 @media (max-width: 767px) {
-  .hero-scene { height: 660px; min-height: 0; max-height: none; }
+  .hero-scene { height: 440px; min-height: 0; max-height: none; }
   .hero-scene .hero-image { object-position: 65% 100%; }
   .hero-scene::after { background: linear-gradient(180deg, #fffffff5 0%, #ffffffe8 35%, #ffffff44 67%, #ffffffdd 100%); }
   .hero-copy { padding-top: 32px; }

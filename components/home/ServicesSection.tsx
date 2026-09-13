@@ -28,7 +28,7 @@ export async function ServicesSection({ locale }: { locale: Locale }) {
           className="mb-16"
         />
 
-        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-3">
           {services.map((service, index) => (
             <Reveal key={service.slug} delay={(index % 3) * 80} className="h-full">
               <ServiceCard service={service} index={index} />

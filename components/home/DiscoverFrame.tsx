@@ -1,4 +1,5 @@
 import { EyewearCategoryCard } from '@/components/cards/EyewearCategoryCard';
+import { EditorialSwiper } from '@/components/ui/EditorialSwiper';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
 import { TextLink } from '@/components/ui/Button';
@@ -21,21 +22,30 @@ export async function DiscoverFrame({ locale }: { locale: Locale }) {
               {t('common.cta.allEyewear')}
             </TextLink>
           }
-          className="mb-16 md:mb-20 "
+          className="mb-10 md:mb-16"
         />
 
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-10">
-          {eyewearCategories.map((category, index) => (
-            <Reveal key={category.slug} delay={index * 90}>
+        <Reveal>
+          <EditorialSwiper
+            variant="discover"
+            label={t('home.discover.title')}
+            labels={{
+              previous: t('common.carousel.previous'),
+              next: t('common.carousel.next'),
+              slide: t('common.carousel.slide'),
+            }}
+          >
+            {eyewearCategories.map((category, index) => (
               <EyewearCategoryCard
+                key={category.slug}
                 category={category}
                 locale={locale}
                 index={String(index + 1).padStart(2, '0')}
-                emphasis={index === 0}
+                compact
               />
-            </Reveal>
-          ))}
-        </div>
+            ))}
+          </EditorialSwiper>
+        </Reveal>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export function EditorialSwiper({ children, label, labels, variant = 'frames' }:
   children: ReactNode;
   label: string;
   labels: CarouselLabels;
-  variant?: 'hero' | 'frames' | 'gallery' | 'journal' | 'detail' | 'products';
+  variant?: 'hero' | 'frames' | 'gallery' | 'journal' | 'detail' | 'products' | 'reviews' | 'discover';
 }) {
   const slides = Children.toArray(children);
   const instance = useRef<SwiperInstance | null>(null);
@@ -24,7 +24,7 @@ export function EditorialSwiper({ children, label, labels, variant = 'frames' }:
   const [reduced, setReduced] = useState(true);
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(1);
-  const single = variant === 'hero' || variant === 'detail';
+  const single = variant === 'hero' || variant === 'detail' || variant === 'reviews';
   const products = variant === 'products';
 
   useEffect(() => {
