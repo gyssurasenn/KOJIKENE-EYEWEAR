@@ -84,13 +84,13 @@ export async function Footer({ locale }: { locale: Locale }) {
                 </div>
               </dl>
             </address>
-            <ButtonLink
+            {/* <ButtonLink
               href={address.mapsDirectionsUrl}
               external
               className="mt-6"
             >
               {t('common.cta.getDirections')}
-            </ButtonLink>
+            </ButtonLink> */}
           </div>
         </FooterGrid>
 

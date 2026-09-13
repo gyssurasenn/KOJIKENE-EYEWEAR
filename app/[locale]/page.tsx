@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Hero } from '@/components/home/Hero';
 import { DiscoverFrame } from '@/components/home/DiscoverFrame';
-import { WhyKojikane } from '@/components/home/WhyKojikane';
+import { PricingPackages } from '@/components/home/PricingPackages';
 import { FamilyStory } from '@/components/home/FamilyStory';
 import { FeaturedEyewear } from '@/components/home/FeaturedEyewear';
 import { ServicesSection } from '@/components/home/ServicesSection';
@@ -35,7 +35,7 @@ export default async function HomePage({ params }: PageProps) {
     <>
       <Hero locale={locale} />
       <DiscoverFrame locale={locale} />
-      <WhyKojikane locale={locale} />
+      <PricingPackages locale={locale} />
       <FamilyStory locale={locale} />
       <FeaturedEyewear locale={locale} />
       <ServicesSection locale={locale} />

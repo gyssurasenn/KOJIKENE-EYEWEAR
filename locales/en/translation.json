@@ -223,6 +223,19 @@
       ],
       "pullQuote": "We want you to leave with glasses you actually feel confident wearing."
     },
+    "pricing": {
+      "title": "Frame and lens packages at prices that fit your budget.",
+      "intro": "Every package comes with comprehensive coverage, so you can trust the quality and service you get at any price point.",
+      "packages": ["990 THB", "1,990 THB", "2,990 THB", "3,990 THB"]
+    },
+    "eyeExam": {
+      "eyebrow": "Eye exams",
+      "title": "Confident fittings, eye exams by trained staff.",
+      "body": [
+        "We care about your eye health, with a thorough eye exam performed by trained staff and a warm welcome every time.",
+        "Ask us about your prescription, basic eye health, frames, or lenses — so you leave with glasses that feel comfortable, see clearly, and fit the way you actually live."
+      ]
+    },
     "featured": {
       "eyebrow": "Featured eyewear",
       "title": "A selection, not a catalogue.",
