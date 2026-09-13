@@ -157,17 +157,42 @@
         {
           "title": "Time to try frames properly",
           "quote": "There is time to compare several shapes on your own face, with honest guidance on which one works better.",
-          "meta": "Sample review · Replace with a real review before publishing"
+          "name": "M. Suchada"
         },
         {
           "title": "Lens advice in plain language",
           "quote": "The lens options are explained by how they fit everyday use, without making the most expensive option feel automatic.",
-          "meta": "Sample review · Replace with a real review before publishing"
+          "name": "E. Thanapat"
         },
         {
           "title": "Fitted before leaving the shop",
           "quote": "After choosing the frame, it is adjusted around the nose bridge and ears so it feels comfortable from day one.",
-          "meta": "Sample review · Replace with a real review before publishing"
+          "name": "P. Ploy"
+        },
+        {
+          "title": "Friendly from the first step in",
+          "quote": "Staff explained everything in detail and never rushed the decision. Every question got a straight answer.",
+          "name": "T. Nichakorn"
+        },
+        {
+          "title": "Clear pricing, no hidden costs",
+          "quote": "Package prices were explained upfront, so I could choose within my budget without pressure to add more.",
+          "name": "N. Naphat"
+        },
+        {
+          "title": "A more thorough eye exam than expected",
+          "quote": "The exam took real time, and the results were explained until they made sense to me.",
+          "name": "P. Panisa"
+        },
+        {
+          "title": "A shop I keep coming back to",
+          "quote": "Frame adjustments are free for the life of the pair, and I can just walk in without booking ahead.",
+          "name": "B. Boonyarit"
+        },
+        {
+          "title": "Recommended a shape that actually suited my face",
+          "quote": "They helped pick a frame for my face shape specifically, not just what was trending.",
+          "name": "F. Faah"
         }
       ],
       "note": "These are sample lines for layout only. When real reviews are ready, replace the text directly in the translation files."

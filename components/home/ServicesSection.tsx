@@ -36,7 +36,7 @@ export async function ServicesSection({ locale }: { locale: Locale }) {
           ))}
         </div>
 
-        <ImageReveal className="mt-20">
+        {/* <ImageReveal className="mt-20">
           <figure className="relative aspect-[16/9] w-full overflow-hidden bg-sand md:aspect-[21/9]">
             <Image
               src={images.fitting.src}
@@ -49,7 +49,7 @@ export async function ServicesSection({ locale }: { locale: Locale }) {
           <figcaption className="mt-4 text-[0.8125rem] text-stone">
             {t('home.services.caption')}
           </figcaption>
-        </ImageReveal>
+        </ImageReveal> */}
       </div>
     </section>
   );

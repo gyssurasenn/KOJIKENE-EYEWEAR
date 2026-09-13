@@ -24,8 +24,9 @@ export function EditorialSwiper({ children, label, labels, variant = 'frames' }:
   const [reduced, setReduced] = useState(true);
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(1);
-  const single = variant === 'hero' || variant === 'detail' || variant === 'reviews';
+  const single = variant === 'hero' || variant === 'detail';
   const products = variant === 'products';
+  const grouped = variant === 'products' || variant === 'reviews';
 
   useEffect(() => {
     const query = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -54,7 +55,11 @@ export function EditorialSwiper({ children, label, labels, variant = 'frames' }:
         speed={reduced ? 0 : 800} grabCursor watchSlidesProgress
         slidesPerView={single ? 1 : 'auto'} spaceBetween={single ? 0 : 24}
         noSwipingSelector={products ? '.product-gallery' : undefined}
-        breakpoints={products ? { 640: { slidesPerGroup: 2 }, 1024: { slidesPerGroup: 4 } } : undefined}
+        breakpoints={
+          products ? { 640: { slidesPerGroup: 2 }, 1024: { slidesPerGroup: 4 } }
+          : variant === 'reviews' ? { 0: { slidesPerGroup: 2 }, 768: { slidesPerGroup: 4 } }
+          : undefined
+        }
         onSwiper={(swiper) => { instance.current = swiper; setReady(true); sync(swiper); }}
         onSlideChange={sync} onResize={sync} onReachEnd={sync} onFromEdge={sync}>
         {slides.map((child, index) => (
@@ -76,10 +81,10 @@ export function EditorialSwiper({ children, label, labels, variant = 'frames' }:
           <ArrowLeft size={20} aria-hidden="true" />
         </button>
         <span className="carousel-count" aria-live="polite" aria-atomic="true">
-          <span className="sr-only">{labels.page || labels.slide} </span>{String((products ? page : active) + 1).padStart(2, '0')}
-          <span> / {String(products ? pages : slides.length).padStart(2, '0')}</span>
+          <span className="sr-only">{labels.page || labels.slide} </span>{String((grouped ? page : active) + 1).padStart(2, '0')}
+          <span> / {String(grouped ? pages : slides.length).padStart(2, '0')}</span>
         </span>
-        <span className="carousel-progress" aria-hidden="true"><span style={{ transform: `scaleX(${((products ? page : active) + 1) / (products ? pages : slides.length)})` }} /></span>
+        <span className="carousel-progress" aria-hidden="true"><span style={{ transform: `scaleX(${((grouped ? page : active) + 1) / (grouped ? pages : slides.length)})` }} /></span>
         <button type="button" title={labels.next} aria-label={labels.next}
           disabled={!ready || end} onClick={() => instance.current?.slideNext()}>
           <ArrowRight size={20} aria-hidden="true" />

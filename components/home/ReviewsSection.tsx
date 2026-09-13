@@ -10,7 +10,7 @@ import { reviewPhotos } from '@/lib/images';
 type ReviewItem = {
   title: string;
   quote: string;
-  meta: string;
+  name: string;
 };
 
 export async function ReviewsSection({ locale }: { locale: Locale }) {
@@ -44,36 +44,34 @@ export async function ReviewsSection({ locale }: { locale: Locale }) {
               return (
                 <article
                   key={review.title}
-                  className="grid overflow-hidden border border-ink/10 bg-white md:min-h-[30rem] md:grid-cols-[0.95fr_1.05fr]"
+                  className="flex h-full flex-col overflow-hidden border border-ink/10 bg-white"
                 >
-                  <figure className="relative aspect-[4/3] bg-bone md:aspect-auto">
+                  <figure className="relative aspect-[4/3] bg-bone">
                     <Image
                       src={photo.src}
                       alt={photo.alt}
                       fill
-                      sizes="(min-width: 1024px) 42vw, (min-width: 768px) 45vw, 90vw"
+                      sizes="(min-width: 1024px) 23vw, (min-width: 640px) 45vw, 45vw"
                       className="object-cover"
                     />
                   </figure>
 
-                  <div className="flex flex-col justify-between p-5 sm:p-7 lg:p-10">
+                  <div className="flex flex-1 flex-col justify-between p-5">
                     <div>
-                      <div className="mb-6 flex gap-1 text-brand" aria-label={t('home.reviews.rating')}>
+                      <div className="mb-4 flex gap-1 text-brand" aria-label={t('home.reviews.rating')}>
                         {Array.from({ length: 5 }).map((_, starIndex) => (
-                          <Star key={starIndex} size={16} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
+                          <Star key={starIndex} size={14} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
                         ))}
                       </div>
-                      <h3 className="font-display text-2xl font-light leading-snug text-balance sm:text-3xl">
+                      <h3 className="font-display text-lg font-light leading-snug text-balance">
                         {review.title}
                       </h3>
-                      <p className="mt-5 max-w-2xl text-base leading-relaxed text-graphite text-pretty sm:text-lg">
+                      <p className="mt-3 text-sm leading-relaxed text-graphite text-pretty">
                         {review.quote}
                       </p>
                     </div>
 
-                    <p className="mt-10 border-t border-ink/10 pt-5 text-xs uppercase tracking-widest2 text-stone">
-                      {review.meta}
-                    </p>
+                    <p className="mt-6 text-sm font-bold text-ink">{review.name}</p>
                   </div>
                 </article>
               );

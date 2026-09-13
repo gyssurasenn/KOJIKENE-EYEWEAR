@@ -22,6 +22,13 @@
 .carousel-products > .carousel-controls { justify-content: center; margin-top: 20px; }
 .carousel-products > .carousel-controls .carousel-progress { display: none; }
 .carousel-products > .carousel-controls button { border: 0; }
+.carousel-reviews > .swiper > .swiper-wrapper > .swiper-slide { width: calc((100% - 72px) / 4); }
+.carousel-reviews > .carousel-controls { justify-content: center; margin-top: 20px; }
+.carousel-reviews > .carousel-controls .carousel-progress { display: none; }
+.carousel-reviews > .carousel-controls button { border: 0; }
+@media (max-width: 767px) {
+  .carousel-reviews > .swiper > .swiper-wrapper > .swiper-slide { width: calc((100% - 24px) / 2); }
+}
 .product-card { min-width: 0; }
 .product-gallery { position: relative; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
 .product-image { position: relative; width: 100%; aspect-ratio: 1; }
