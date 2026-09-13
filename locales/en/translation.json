@@ -148,6 +148,30 @@
   "home": {
     "experience": { "title": "Before they become your everyday glasses.", "steps": ["Explore frames", "Try them on", "Discuss everyday use", "Choose lenses", "Fit and adjust", "Collect and care"] },
     "gallery": { "eyebrow": "At KOJIKANE", "title": "A closer look at the shop.", "exterior": "The shopfront", "interior": "Inside the shop", "wall": "Details from our wall", "fitting": "Time for a proper fit" },
+    "reviews": {
+      "eyebrow": "Customer voices",
+      "title": "Reviews that help visitors decide.",
+      "intro": "A space for real reviews from Google, LINE or Facebook, so new visitors can understand the service before coming to the shop.",
+      "rating": "5-star rating",
+      "items": [
+        {
+          "title": "Time to try frames properly",
+          "quote": "There is time to compare several shapes on your own face, with honest guidance on which one works better.",
+          "meta": "Sample review · Replace with a real review before publishing"
+        },
+        {
+          "title": "Lens advice in plain language",
+          "quote": "The lens options are explained by how they fit everyday use, without making the most expensive option feel automatic.",
+          "meta": "Sample review · Replace with a real review before publishing"
+        },
+        {
+          "title": "Fitted before leaving the shop",
+          "quote": "After choosing the frame, it is adjusted around the nose bridge and ears so it feels comfortable from day one.",
+          "meta": "Sample review · Replace with a real review before publishing"
+        }
+      ],
+      "note": "These are sample lines for layout only. When real reviews are ready, replace the text directly in the translation files."
+    },
     "slides": {
       "visit": { "label": "Try it in person", "title": "Good eyewear starts with trying it on.", "body": "Explore shapes, talk about lenses, and find a fit that feels right." },
       "fashion": { "label": "Fashion eyewear", "title": "Find a shape with character.", "body": "A frame on a shelf feels different when it is on your face. Come and compare." },

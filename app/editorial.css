@@ -7,9 +7,8 @@
 }
 .editorial-carousel { position: relative; min-width: 0; }
 .brand-strip { min-width: 0; }
+.brand-strip .swiper-wrapper { align-items: center; transition-timing-function: linear !important; }
 .brand-strip .swiper-slide { width: 50%; height: 90px; }
-.brand-strip button { display: grid; place-items: center; width: 44px; height: 44px; }
-.brand-strip button:hover { color: var(--brand-accent); }
 @media (min-width: 640px) { .brand-strip .swiper-slide { width: 33.333333%; height: 110px; } }
 @media (min-width: 1024px) { .brand-strip .swiper-slide { width: 25%; height: 130px; } }
 /* Frame the original square logo without altering its pixels. */

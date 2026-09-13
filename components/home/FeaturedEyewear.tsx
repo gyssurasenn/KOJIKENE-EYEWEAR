@@ -37,9 +37,9 @@ export async function FeaturedEyewear({ locale }: { locale: Locale }) {
 
         <ProductCarousel locale={locale} />
 
-        <Reveal className="mt-20 border-t border-ink/10 pt-8">
+        {/* <Reveal className="mt-20 border-t border-ink/10 pt-8">
           <p className="max-w-2xl text-sm leading-relaxed text-stone">{t('home.featured.note')}</p>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );

@@ -61,13 +61,13 @@ export async function EyewearCategoryCard({
             <p className="mt-3 text-lg font-light text-graphite text-pretty">
               {t(`${base}.tagline`)}
             </p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-stone">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-graphite">
               {t(`${base}.description`)}
             </p>
           </div>
           <span
             aria-hidden="true"
-            className="mt-1 shrink-0 text-[0.6875rem] uppercase tracking-widest2 text-stone transition-transform duration-500 ease-editorial group-hover:translate-x-1"
+            className="mt-1 shrink-0 text-[0.6875rem] uppercase tracking-widest2 text-graphite transition-transform duration-500 ease-editorial group-hover:translate-x-1"
           >
             {t('common.cta.view')} →
           </span>
@@ -77,7 +77,7 @@ export async function EyewearCategoryCard({
           {highlights.map((highlight) => (
             <li
               key={highlight}
-              className="text-[0.6875rem] uppercase tracking-widest2 text-stone after:ml-3 after:text-mist after:content-['·'] last:after:content-none"
+              className="text-[0.6875rem] uppercase tracking-widest2 text-graphite after:ml-3 after:text-stone after:content-['·'] last:after:content-none"
             >
               {highlight}
             </li>

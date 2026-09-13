@@ -213,6 +213,21 @@ export const images = {
 
 export type JournalImageKey = keyof typeof images.journal;
 
+/** Social media icons used in the footer. */
+export const socialIcons = {
+  Facebook: { src: `${DIR}/facebook.png`, alt: 'Facebook', width: 512, height: 512 },
+  LINE: { src: `${DIR}/line.png`, alt: 'LINE', width: 512, height: 512 },
+  Instagram: { src: `${DIR}/instagram.png`, alt: 'Instagram', width: 512, height: 512 },
+  TikTok: { src: `${DIR}/tiktok.png`, alt: 'TikTok', width: 512, height: 512 },
+} as const;
+
+/** Review photos shown on the homepage. Replace these with real customer review photos when available. */
+export const reviewPhotos = {
+  tryFrames: images.storeInterior,
+  lensAdvice: images.lensConsultation,
+  frameFitting: images.fitting,
+} as const;
+
 /** Temporary gallery illustrations, not photographs of actual products. */
 export const demoProductGalleries = {
   aoi: [images.frames.aoi, images.heroDetail, images.fashionEyewear, images.frames.sumi],

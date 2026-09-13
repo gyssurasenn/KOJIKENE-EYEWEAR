@@ -2,7 +2,7 @@
 
 ## Update: in-store brands
 
-The owner supplied 11 brand logos in public/images/brandInstore. The homepage six-step experience list is intentionally replaced with InStoreBrands, using inStoreBrands in lib/images.ts. It uses Swiper autoplay (3000ms delay, 1200ms transition), pause/play, hover/focus stopping, and reduced-motion support. Existing experience translation keys are retained.
+The owner supplied 11 brand logos in public/images/brandInstore. The homepage six-step experience list is intentionally replaced with InStoreBrands, using inStoreBrands in lib/images.ts. It sits at the bottom of the FamilyStory wallpaper section as a white brand strip, with a slow continuous Swiper autoplay (0ms delay, linear transition), no visible controls, and reduced-motion support. Existing experience translation keys are retained.
 
 > เอกสารนี้เขียนไว้ให้ทั้งเจ้าของโปรเจกต์และ AI coding agent อ่านก่อนแก้เว็บ  
 > ภาษาในการคุยกับผู้ใช้: **ภาษาไทยเป็นหลัก**  
@@ -499,9 +499,18 @@ SEO สำคัญมาก เพราะเว็บนี้ต้องใ
 - `components/layout/FooterGrid.tsx` ตรวจ route segment เพื่อซ่อนแผนที่ใน Footer เฉพาะหน้า Contact ทั้งสองภาษา
 - หน้า Contact ยังคงใช้ VisitStore และแผนที่ใหญ่ตามเดิม
 - iframe ใช้ component กลาง `components/ui/StoreMap.tsx`; URL ยังมาจาก `lib/site.ts`
+
+## 18. Homepage reviews (2026-09-13)
+
+- หน้าแรกเปลี่ยนจาก `StoreGallery` เป็น `ReviewsSection` เพราะ gallery ซ้ำกับภาพบรรยากาศ/ข้อมูลร้านส่วนอื่น
+- `StoreGallery` ยังถูกเก็บไว้และยังใช้กับหน้า About ได้
+- ข้อความรีวิวอยู่ที่ `home.reviews` ในไฟล์ `locales/th|en/translation.json`
+- รูปรีวิวอยู่ที่ `reviewPhotos` ใน `lib/images.ts`; ตอนนี้ใช้รูป placeholder เดิมแทนไว้ก่อน
+- รีวิวปัจจุบันเป็นข้อความตัวอย่างสำหรับ layout เท่านั้น ควรแทนที่ด้วยรีวิวจริงจาก Google, LINE หรือ Facebook ก่อนเผยแพร่จริง
 # Brand theme (2026-09-13)
 
 - Primary actions use orange `brand` (#FF8A4C) with dark text; hover uses #F57835.
 - Neutral section/footer surface `bone` is #F4F4F3. Secondary controls remain neutral.
+- Secondary body text `graphite` is #34302B for stronger readability while staying softer than `ink`.
 - Header/Footer use the original PNG through `lib/images.ts`; `.brand-logo` CSS frames its whitespace without editing the original file.
 - Dark orange `--brand-accent` remains for small interactive indicators and gallery controls.

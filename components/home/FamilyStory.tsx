@@ -16,9 +16,8 @@ export async function FamilyStory({ locale }: { locale: Locale }) {
   const paragraphs = getParagraphs(t, 'home.family.body');
 
   return (
-    // <section className="wallpaper2-section shell py-section">
-    <section className="wallpaper2-section py-section">
-      <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+    <section className="wallpaper2-section pt-section">
+      <div className="shell grid items-center gap-12 pb-20 lg:grid-cols-2 lg:gap-20 lg:pb-28">
         <ImageReveal className="relative order-2 lg:order-1">
           <figure className="relative aspect-[4/3] w-full overflow-hidden bg-sand lg:aspect-[5/6]">
             <Image
@@ -69,8 +68,7 @@ export async function FamilyStory({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
       </div>
-      <InStoreBrands labels={{ title: t('common.inStoreBrands.title'), pause: t('common.inStoreBrands.pause'),
-        play: t('common.inStoreBrands.play'), previous: t('common.carousel.previous'), next: t('common.carousel.next') }} />
+      <InStoreBrands labels={{ title: t('common.inStoreBrands.title') }} />
     </section>
   );
 }

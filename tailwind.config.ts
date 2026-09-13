@@ -25,7 +25,7 @@ const config: Config = {
         // Ink
         ink: '#16140F', // near-black, warm
         charcoal: '#2A2724',
-        graphite: '#4A4640',
+        graphite: '#34302B',
         stone: '#7C766C', // soft gray, body-secondary
         mist: '#A9A399',
         // Very subtle accent

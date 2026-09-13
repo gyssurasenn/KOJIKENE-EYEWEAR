@@ -23,7 +23,7 @@ export async function Footer({ locale }: { locale: Locale }) {
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-graphite">
               {t('common.footer.blurb')}
             </p>
-            <SocialLinks className="mt-8" />
+            <SocialLinks variant="icons" className="mt-8" />
           </div>
 
           {/* Visit */}

@@ -18,9 +18,11 @@
 | ประสบการณ์หน้าร้าน รูปใหญ่ | images.family | components/home/FamilyStory.tsx |
 | ประสบการณ์หน้าร้าน รูปเล็ก | images.storeInterior | components/home/FamilyStory.tsx |
 | บริการหน้าแรก | images.fitting | components/home/ServicesSection.tsx |
+| รีวิวหน้าแรก | reviewPhotos | components/home/ReviewsSection.tsx |
 | บทความ | images.journal ตาม slug | content/articles/th.ts และ en.ts |
 | กรอบแว่น editorial เดิม | images.frames | content/eyewear.ts |
 | สินค้าหน้าแรก | รายการรูปที่ products อ้างถึง | content/products.ts |
+| ไอคอน social ใน footer | socialIcons | components/ui/SocialLinks.tsx |
 
 ชื่อ `family` เป็น key เดิมในโค้ด ไม่ได้หมายความว่าต้องใช้รูปครอบครัว ใช้ภาพปรึกษาหรือ fitting หน้าร้านได้
 บาง key ใช้ร่วมหลายหน้า เปลี่ยนครั้งเดียวจึงอาจเปลี่ยนหลายตำแหน่ง
@@ -38,6 +40,19 @@
 เพิ่ม/เปลี่ยน/เรียงแบรนด์ที่ `inStoreBrands` ใน `lib/images.ts` โดยใส่ชื่อไฟล์ตรงตัวพิมพ์ใหญ่เล็ก และขนาดจริง
 ตัวเลื่อนอยู่ใน `components/home/InStoreBrands.tsx`: `delay: 3000` คือเวลารอ และ `speed: 1200` คือเวลาขยับ หน่วยมิลลิวินาที
 หยุดเมื่อวางเมาส์หรือโฟกัสภายใน มีปุ่มหยุด/เล่น และไม่เล่นอัตโนมัติเมื่อเปิด reduced motion
+
+## รูปรีวิวหน้าแรก
+
+รีวิวหน้าแรกใช้ข้อความจาก `home.reviews.items` ในไฟล์ภาษา และใช้รูปจาก `reviewPhotos` ใน `lib/images.ts`
+ถ้าจะเอารูปรีวิวจริงจาก Google มาใช้ ให้ดาวน์โหลด/เตรียมไฟล์ที่ได้รับอนุญาตแล้วใส่ใน `public/images/reviews/`
+จากนั้นเปลี่ยน `src`, `alt`, `width`, `height` ใน `reviewPhotos` ให้ตรงกับไฟล์จริง
+แนะนำใช้ภาพแนวนอนหรือสี่เหลี่ยมใกล้เคียง 4:3 เช่น 1200 × 900 เพื่อให้ครอปสวยใน card
+
+## ไอคอน social ใน Footer
+
+Footer ใช้ไฟล์ `facebook.png`, `line.png`, `instagram.png`, `tiktok.png` จาก `public/images/`
+รายการอ้างอิงอยู่ใน `socialIcons` ที่ `lib/images.ts`
+ถ้าจะเปลี่ยนไอคอน ให้ใช้ไฟล์สี่เหลี่ยมจัตุรัส เช่น 512 × 512 แล้วแก้ path ใน `socialIcons`
 
 ## เพิ่มชุดสินค้า (ขั้นตอน)
 
