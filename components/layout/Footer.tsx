@@ -14,7 +14,7 @@ export async function Footer({ locale }: { locale: Locale }) {
   const addressLines = locale === 'th' ? address.lines : address.linesEn;
 
   return (
-    <footer id="footer" className="border-t border-ink/10 bg-bone">
+    <footer id="footer" className="border-t border-ink/10 bg-mist/40">
       <div className="shell py-16 md:py-20">
         <FooterGrid map={<StoreMap title={t('visit.mapTitle')} className="h-[300px] w-full border-0 bg-white md:h-[320px]" />}>
           {/* Brand */}

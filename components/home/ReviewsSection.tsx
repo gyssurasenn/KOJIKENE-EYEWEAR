@@ -19,7 +19,7 @@ export async function ReviewsSection({ locale }: { locale: Locale }) {
   const photos = [reviewPhotos.tryFrames, reviewPhotos.lensAdvice, reviewPhotos.frameFitting];
 
   return (
-    <section className="bg-white border-b border-ink/10">
+    <section className="bg-bone border-b border-ink/10">
       <div className="shell py-section">
         <SectionHeading
           eyebrow={t('home.reviews.eyebrow')}
@@ -79,9 +79,9 @@ export async function ReviewsSection({ locale }: { locale: Locale }) {
           </EditorialSwiper>
         </Reveal>
 
-        <Reveal className="mt-8 max-w-2xl text-sm leading-relaxed text-stone">
+        {/* <Reveal className="mt-8 max-w-2xl text-sm leading-relaxed text-stone">
           {t('home.reviews.note')}
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );

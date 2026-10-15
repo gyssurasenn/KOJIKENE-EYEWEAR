@@ -38,7 +38,7 @@ export default async function HomePage({ params }: PageProps) {
       <PricingPackages locale={locale} />
       <FamilyStory locale={locale} />
       <FeaturedEyewear locale={locale} />
-      <ServicesSection locale={locale} />
+      {/* <ServicesSection locale={locale} /> */}
       <ReviewsSection locale={locale} />
       <JournalSection locale={locale} />
     </>
